@@ -10,7 +10,6 @@
 		478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */; };
 		8428A12B1E233CFC003532BA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12A1E233CFC003532BA /* Model.swift */; };
 		8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12D1E2345CC003532BA /* StatisticsController.swift */; };
-		8428A1301E23462C003532BA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12F1E23462C003532BA /* Parser.swift */; };
 		843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D01E232FE700B9FF47 /* AppDelegate.swift */; };
 		843955D61E232FE700B9FF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843955D41E232FE700B9FF47 /* Main.storyboard */; };
 		843955D81E232FE700B9FF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843955D71E232FE700B9FF47 /* Assets.xcassets */; };
@@ -19,6 +18,12 @@
 		843955F41E23330D00B9FF47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F31E23330D00B9FF47 /* MainController.swift */; };
 		843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F81E23345100B9FF47 /* UIView+Gradient.swift */; };
 		843955FB1E23391C00B9FF47 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 843955FA1E23391C00B9FF47 /* orders.json */; };
+		848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9651E23E2F9003324E9 /* Address+JSON.swift */; };
+		848AC9691E23E335003324E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9681E23E335003324E9 /* Item.swift */; };
+		848AC96E1E23E3EA003324E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC96D1E23E3EA003324E9 /* Order.swift */; };
+		848AC9711E23E421003324E9 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9701E23E421003324E9 /* Customer.swift */; };
+		848AC9731E23E458003324E9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9721E23E458003324E9 /* Parser.swift */; };
+		848AC9751E23E463003324E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9741E23E463003324E9 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,6 @@
 		5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8428A12A1E233CFC003532BA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
 		8428A12D1E2345CC003532BA /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsController.swift; path = "View Controllers/Statistics/StatisticsController.swift"; sourceTree = "<group>"; };
-		8428A12F1E23462C003532BA /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Model/Parser.swift; sourceTree = "<group>"; };
 		843955CD1E232FE700B9FF47 /* Orderify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843955D01E232FE700B9FF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843955D51E232FE700B9FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +52,12 @@
 		843955F31E23330D00B9FF47 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = "View Controllers/Main/MainController.swift"; sourceTree = "<group>"; };
 		843955F81E23345100B9FF47 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		843955FA1E23391C00B9FF47 /* orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
+		848AC9651E23E2F9003324E9 /* Address+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Address+JSON.swift"; path = "Model/Address/Address+JSON.swift"; sourceTree = "<group>"; };
+		848AC9681E23E335003324E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Model/Item/Item.swift; sourceTree = "<group>"; };
+		848AC96D1E23E3EA003324E9 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Model/Order/Order.swift; sourceTree = "<group>"; };
+		848AC9701E23E421003324E9 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Model/Customer/Customer.swift; sourceTree = "<group>"; };
+		848AC9721E23E458003324E9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Model/Parser/Parser.swift; sourceTree = "<group>"; };
+		848AC9741E23E463003324E9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Model/Address/Address.swift; sourceTree = "<group>"; };
 		AC5A0216B558165C56D0A590 /* Pods-Orderify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orderify/Pods-Orderify.release.xcconfig"; sourceTree = "<group>"; };
 		E87F4649AD01BB2E652CFB21 /* Pods-Orderify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orderify/Pods-Orderify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +87,15 @@
 				8428A12D1E2345CC003532BA /* StatisticsController.swift */,
 			);
 			name = Statistics;
+			sourceTree = "<group>";
+		};
+		8428A1311E23E27A003532BA /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				848AC9741E23E463003324E9 /* Address.swift */,
+				848AC9651E23E2F9003324E9 /* Address+JSON.swift */,
+			);
+			name = Address;
 			sourceTree = "<group>";
 		};
 		843955C41E232FE600B9FF47 = {
@@ -123,8 +142,12 @@
 		843955F01E23304300B9FF47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				848AC96F1E23E40D003324E9 /* Customer */,
+				848AC96C1E23E3DA003324E9 /* Order */,
+				848AC9671E23E326003324E9 /* Item */,
+				8428A1311E23E27A003532BA /* Address */,
 				8428A12A1E233CFC003532BA /* Model.swift */,
-				8428A12F1E23462C003532BA /* Parser.swift */,
+				848AC9721E23E458003324E9 /* Parser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -172,6 +195,30 @@
 				843955D71E232FE700B9FF47 /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		848AC9671E23E326003324E9 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				848AC9681E23E335003324E9 /* Item.swift */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		848AC96C1E23E3DA003324E9 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				848AC96D1E23E3EA003324E9 /* Order.swift */,
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		848AC96F1E23E40D003324E9 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				848AC9701E23E421003324E9 /* Customer.swift */,
+			);
+			name = Customer;
 			sourceTree = "<group>";
 		};
 		A0881F7D2A3B26A620175255 /* Frameworks */ = {
@@ -348,10 +395,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */,
+				848AC9731E23E458003324E9 /* Parser.swift in Sources */,
+				848AC9691E23E335003324E9 /* Item.swift in Sources */,
+				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
 				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,
 				843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */,
-				8428A1301E23462C003532BA /* Parser.swift in Sources */,
+				848AC9751E23E463003324E9 /* Address.swift in Sources */,
 				8428A12B1E233CFC003532BA /* Model.swift in Sources */,
+				848AC9711E23E421003324E9 /* Customer.swift in Sources */,
 				843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */,
 				8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */,
 			);
