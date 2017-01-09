@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */; };
+		8428A12B1E233CFC003532BA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12A1E233CFC003532BA /* Model.swift */; };
+		8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12D1E2345CC003532BA /* StatisticsController.swift */; };
+		8428A1301E23462C003532BA /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12F1E23462C003532BA /* Parser.swift */; };
 		843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D01E232FE700B9FF47 /* AppDelegate.swift */; };
-		843955D31E232FE700B9FF47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D21E232FE700B9FF47 /* ViewController.swift */; };
 		843955D61E232FE700B9FF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843955D41E232FE700B9FF47 /* Main.storyboard */; };
 		843955D81E232FE700B9FF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843955D71E232FE700B9FF47 /* Assets.xcassets */; };
 		843955DB1E232FE700B9FF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */; };
 		843955E61E232FE700B9FF47 /* OrderifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955E51E232FE700B9FF47 /* OrderifyTests.swift */; };
+		843955F41E23330D00B9FF47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F31E23330D00B9FF47 /* MainController.swift */; };
+		843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F81E23345100B9FF47 /* UIView+Gradient.swift */; };
+		843955FB1E23391C00B9FF47 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 843955FA1E23391C00B9FF47 /* orders.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8428A12A1E233CFC003532BA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
+		8428A12D1E2345CC003532BA /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsController.swift; path = "View Controllers/Statistics/StatisticsController.swift"; sourceTree = "<group>"; };
+		8428A12F1E23462C003532BA /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Model/Parser.swift; sourceTree = "<group>"; };
 		843955CD1E232FE700B9FF47 /* Orderify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843955D01E232FE700B9FF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		843955D21E232FE700B9FF47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843955D51E232FE700B9FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843955D71E232FE700B9FF47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843955DA1E232FE700B9FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +45,11 @@
 		843955E11E232FE700B9FF47 /* OrderifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843955E51E232FE700B9FF47 /* OrderifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderifyTests.swift; sourceTree = "<group>"; };
 		843955E71E232FE700B9FF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843955F31E23330D00B9FF47 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = "View Controllers/Main/MainController.swift"; sourceTree = "<group>"; };
+		843955F81E23345100B9FF47 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		843955FA1E23391C00B9FF47 /* orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
+		AC5A0216B558165C56D0A590 /* Pods-Orderify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Orderify/Pods-Orderify.release.xcconfig"; sourceTree = "<group>"; };
+		E87F4649AD01BB2E652CFB21 /* Pods-Orderify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Orderify/Pods-Orderify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +71,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8428A12C1E2345AD003532BA /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				8428A12D1E2345CC003532BA /* StatisticsController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		843955C41E232FE600B9FF47 = {
 			isa = PBXGroup;
 			children = (
 				843955CF1E232FE700B9FF47 /* Orderify */,
 				843955E41E232FE700B9FF47 /* OrderifyTests */,
 				843955CE1E232FE700B9FF47 /* Products */,
+				C7687FB403DC70D9CCA67BD1 /* Pods */,
+				A0881F7D2A3B26A620175255 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +102,11 @@
 		843955CF1E232FE700B9FF47 /* Orderify */ = {
 			isa = PBXGroup;
 			children = (
-				843955D01E232FE700B9FF47 /* AppDelegate.swift */,
-				843955D21E232FE700B9FF47 /* ViewController.swift */,
-				843955D41E232FE700B9FF47 /* Main.storyboard */,
-				843955D71E232FE700B9FF47 /* Assets.xcassets */,
-				843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */,
-				843955DC1E232FE700B9FF47 /* Info.plist */,
+				843955F51E23341300B9FF47 /* Extensions */,
+				843955F11E2332E900B9FF47 /* ViewControllers */,
+				843955F01E23304300B9FF47 /* Model */,
+				843955F61E23341A00B9FF47 /* Supporting Files */,
+				843955F71E23342B00B9FF47 /* Resources */,
 			);
 			path = Orderify;
 			sourceTree = "<group>";
@@ -96,6 +120,77 @@
 			path = OrderifyTests;
 			sourceTree = "<group>";
 		};
+		843955F01E23304300B9FF47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8428A12A1E233CFC003532BA /* Model.swift */,
+				8428A12F1E23462C003532BA /* Parser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		843955F11E2332E900B9FF47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8428A12C1E2345AD003532BA /* Statistics */,
+				843955F21E2332F000B9FF47 /* Main */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		843955F21E2332F000B9FF47 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				843955F31E23330D00B9FF47 /* MainController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		843955F51E23341300B9FF47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				843955F81E23345100B9FF47 /* UIView+Gradient.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		843955F61E23341A00B9FF47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				843955FA1E23391C00B9FF47 /* orders.json */,
+				843955DC1E232FE700B9FF47 /* Info.plist */,
+				843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */,
+				843955D41E232FE700B9FF47 /* Main.storyboard */,
+				843955D01E232FE700B9FF47 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		843955F71E23342B00B9FF47 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				843955D71E232FE700B9FF47 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A0881F7D2A3B26A620175255 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7687FB403DC70D9CCA67BD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E87F4649AD01BB2E652CFB21 /* Pods-Orderify.debug.xcconfig */,
+				AC5A0216B558165C56D0A590 /* Pods-Orderify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843955EA1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "Orderify" */;
 			buildPhases = (
+				051EB91749931AF39F5D0BA6 /* [CP] Check Pods Manifest.lock */,
 				843955C91E232FE600B9FF47 /* Sources */,
 				843955CA1E232FE600B9FF47 /* Frameworks */,
 				843955CB1E232FE600B9FF47 /* Resources */,
+				C2C928AD704E12C7BC75426C /* [CP] Embed Pods Frameworks */,
+				463680A5464623D618A23F7D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +281,7 @@
 			files = (
 				843955DB1E232FE700B9FF47 /* LaunchScreen.storyboard in Resources */,
 				843955D81E232FE700B9FF47 /* Assets.xcassets in Resources */,
+				843955FB1E23391C00B9FF47 /* orders.json in Resources */,
 				843955D61E232FE700B9FF47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,13 +295,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		051EB91749931AF39F5D0BA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		463680A5464623D618A23F7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Orderify/Pods-Orderify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2C928AD704E12C7BC75426C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Orderify/Pods-Orderify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		843955C91E232FE600B9FF47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843955D31E232FE700B9FF47 /* ViewController.swift in Sources */,
+				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,
+				843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */,
+				8428A1301E23462C003532BA /* Parser.swift in Sources */,
+				8428A12B1E233CFC003532BA /* Model.swift in Sources */,
 				843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */,
+				8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +490,12 @@
 		};
 		843955EB1E232FE700B9FF47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87F4649AD01BB2E652CFB21 /* Pods-Orderify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y3RCB36D2R;
 				INFOPLIST_FILE = Orderify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.Orderify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,10 +505,12 @@
 		};
 		843955EC1E232FE700B9FF47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC5A0216B558165C56D0A590 /* Pods-Orderify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y3RCB36D2R;
 				INFOPLIST_FILE = Orderify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.Orderify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +567,7 @@
 				843955EC1E232FE700B9FF47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		843955ED1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "OrderifyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +576,7 @@
 				843955EF1E232FE700B9FF47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
