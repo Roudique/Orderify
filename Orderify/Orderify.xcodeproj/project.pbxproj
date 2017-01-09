@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D01E232FE700B9FF47 /* AppDelegate.swift */; };
+		843955D31E232FE700B9FF47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D21E232FE700B9FF47 /* ViewController.swift */; };
+		843955D61E232FE700B9FF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843955D41E232FE700B9FF47 /* Main.storyboard */; };
+		843955D81E232FE700B9FF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843955D71E232FE700B9FF47 /* Assets.xcassets */; };
+		843955DB1E232FE700B9FF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */; };
+		843955E61E232FE700B9FF47 /* OrderifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955E51E232FE700B9FF47 /* OrderifyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		843955E21E232FE700B9FF47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843955C51E232FE600B9FF47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 843955CC1E232FE600B9FF47;
+			remoteInfo = Orderify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		843955CD1E232FE700B9FF47 /* Orderify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		843955D01E232FE700B9FF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		843955D21E232FE700B9FF47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		843955D51E232FE700B9FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		843955D71E232FE700B9FF47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		843955DA1E232FE700B9FF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		843955DC1E232FE700B9FF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843955E11E232FE700B9FF47 /* OrderifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		843955E51E232FE700B9FF47 /* OrderifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderifyTests.swift; sourceTree = "<group>"; };
+		843955E71E232FE700B9FF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		843955CA1E232FE600B9FF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843955DE1E232FE700B9FF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		843955C41E232FE600B9FF47 = {
+			isa = PBXGroup;
+			children = (
+				843955CF1E232FE700B9FF47 /* Orderify */,
+				843955E41E232FE700B9FF47 /* OrderifyTests */,
+				843955CE1E232FE700B9FF47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		843955CE1E232FE700B9FF47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				843955CD1E232FE700B9FF47 /* Orderify.app */,
+				843955E11E232FE700B9FF47 /* OrderifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		843955CF1E232FE700B9FF47 /* Orderify */ = {
+			isa = PBXGroup;
+			children = (
+				843955D01E232FE700B9FF47 /* AppDelegate.swift */,
+				843955D21E232FE700B9FF47 /* ViewController.swift */,
+				843955D41E232FE700B9FF47 /* Main.storyboard */,
+				843955D71E232FE700B9FF47 /* Assets.xcassets */,
+				843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */,
+				843955DC1E232FE700B9FF47 /* Info.plist */,
+			);
+			path = Orderify;
+			sourceTree = "<group>";
+		};
+		843955E41E232FE700B9FF47 /* OrderifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				843955E51E232FE700B9FF47 /* OrderifyTests.swift */,
+				843955E71E232FE700B9FF47 /* Info.plist */,
+			);
+			path = OrderifyTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		843955CC1E232FE600B9FF47 /* Orderify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843955EA1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "Orderify" */;
+			buildPhases = (
+				843955C91E232FE600B9FF47 /* Sources */,
+				843955CA1E232FE600B9FF47 /* Frameworks */,
+				843955CB1E232FE600B9FF47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orderify;
+			productName = Orderify;
+			productReference = 843955CD1E232FE700B9FF47 /* Orderify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		843955E01E232FE700B9FF47 /* OrderifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843955ED1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "OrderifyTests" */;
+			buildPhases = (
+				843955DD1E232FE700B9FF47 /* Sources */,
+				843955DE1E232FE700B9FF47 /* Frameworks */,
+				843955DF1E232FE700B9FF47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843955E31E232FE700B9FF47 /* PBXTargetDependency */,
+			);
+			name = OrderifyTests;
+			productName = OrderifyTests;
+			productReference = 843955E11E232FE700B9FF47 /* OrderifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		843955C51E232FE600B9FF47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = roudique.com;
+				TargetAttributes = {
+					843955CC1E232FE600B9FF47 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y3RCB36D2R;
+						ProvisioningStyle = Automatic;
+					};
+					843955E01E232FE700B9FF47 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y3RCB36D2R;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 843955CC1E232FE600B9FF47;
+					};
+				};
+			};
+			buildConfigurationList = 843955C81E232FE600B9FF47 /* Build configuration list for PBXProject "Orderify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 843955C41E232FE600B9FF47;
+			productRefGroup = 843955CE1E232FE700B9FF47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				843955CC1E232FE600B9FF47 /* Orderify */,
+				843955E01E232FE700B9FF47 /* OrderifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		843955CB1E232FE600B9FF47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843955DB1E232FE700B9FF47 /* LaunchScreen.storyboard in Resources */,
+				843955D81E232FE700B9FF47 /* Assets.xcassets in Resources */,
+				843955D61E232FE700B9FF47 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843955DF1E232FE700B9FF47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		843955C91E232FE600B9FF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843955D31E232FE700B9FF47 /* ViewController.swift in Sources */,
+				843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843955DD1E232FE700B9FF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843955E61E232FE700B9FF47 /* OrderifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		843955E31E232FE700B9FF47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 843955CC1E232FE600B9FF47 /* Orderify */;
+			targetProxy = 843955E21E232FE700B9FF47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		843955D41E232FE700B9FF47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				843955D51E232FE700B9FF47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		843955D91E232FE700B9FF47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				843955DA1E232FE700B9FF47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		843955E81E232FE700B9FF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		843955E91E232FE700B9FF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		843955EB1E232FE700B9FF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y3RCB36D2R;
+				INFOPLIST_FILE = Orderify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.Orderify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		843955EC1E232FE700B9FF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y3RCB36D2R;
+				INFOPLIST_FILE = Orderify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.Orderify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		843955EE1E232FE700B9FF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y3RCB36D2R;
+				INFOPLIST_FILE = OrderifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.OrderifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orderify.app/Orderify";
+			};
+			name = Debug;
+		};
+		843955EF1E232FE700B9FF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y3RCB36D2R;
+				INFOPLIST_FILE = OrderifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roudique.OrderifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orderify.app/Orderify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		843955C81E232FE600B9FF47 /* Build configuration list for PBXProject "Orderify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843955E81E232FE700B9FF47 /* Debug */,
+				843955E91E232FE700B9FF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843955EA1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "Orderify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843955EB1E232FE700B9FF47 /* Debug */,
+				843955EC1E232FE700B9FF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		843955ED1E232FE700B9FF47 /* Build configuration list for PBXNativeTarget "OrderifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843955EE1E232FE700B9FF47 /* Debug */,
+				843955EF1E232FE700B9FF47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 843955C51E232FE600B9FF47 /* Project object */;
+}
