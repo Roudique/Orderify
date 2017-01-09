@@ -25,6 +25,15 @@ class Parser {
                 for orderJSON in orders {
                     if let order = Order.init(json: orderJSON) {
                         self.orders.append(order)
+                        
+                        if let items = orderJSON["line_items"].array {
+                            for itemJSON in items {
+                                if let item = Item.init(json: itemJSON) {
+                                    order.lineItems.append(item)
+                                }
+                            }
+                        }
+                        
                     }
                 }
             }

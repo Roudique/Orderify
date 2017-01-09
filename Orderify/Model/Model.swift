@@ -29,7 +29,7 @@ struct Address {
     
 }
 
-class Item {
+class Item : JSONInitializable {
     var id : Int
     var quantity : Int
     var title : String
@@ -44,6 +44,26 @@ class Item {
         self.price = price
         self.grams = grams
         self.name = name
+    }
+    
+    required init?(json: JSON) {
+        let id          = json["id"].int
+        let quantity    = json["quantity"].int
+        let title       = json["title"].string
+        let priceString = json["price"].string
+        let grams       = json["grams"].int
+        let name        = json["name"].string
+        
+        if let id = id, let quantity = quantity, let title = title, let priceString = priceString, let grams = grams {
+            self.id         = id
+            self.quantity   = quantity
+            self.title      = title
+            self.price      = Double.init(priceString) ?? 0.0
+            self.grams      = grams
+            self.name       = name
+        } else {
+            return nil
+        }
     }
 }
 
