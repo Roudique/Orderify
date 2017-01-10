@@ -34,8 +34,10 @@ class StatisticsCell: UITableViewCell {
             paidLabel.text = paid ? "paid" : "not paid"
 
         }
-        nameLabel.text = "\(order.customer?.firstName) \(order.customer?.lastName)"
-        emailLabel.text = order.customer?.email
+        if let customer = order.customer {
+            nameLabel.text = "\(customer.firstName) \(customer.lastName)"
+            emailLabel.text = order.customer?.email
+        }
         
         var itemsString = order.lineItems.count > 1 ? "items" : "item"
         if order.lineItems.count == 0 { itemsString = "items" }

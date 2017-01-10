@@ -38,6 +38,11 @@ class Order : JSONInitializable {
             self.email          = email
             self.totalPriceUSD  = Double.init(price) ?? 0.0
             self.lineItems      = Array<Item>.init()
+            self.customer = Customer.init(json: json["customer"])
+            
+            if let financialStatus = json["financial_status"].string {
+                self.paid = financialStatus == "paid"
+            }
         } else {
             return nil
         }
