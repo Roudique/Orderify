@@ -17,11 +17,17 @@ class StatisticsCell: UITableViewCell {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var showMoreBtn: UIButton!
     @IBOutlet weak var btnBotConstraint: NSLayoutConstraint!
+    @IBOutlet weak var wrapperView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        paidLabel.adjustsFontSizeToFitWidth         = true
+        paidLabel.adjustsFontSizeToFitWidth = true
+        wrapperView.applyGradient(colors: [UIColor(red:0.54, green:0.69, blue:0.79, alpha:1.00),
+                                           UIColor(red:0.83, green:0.88, blue:0.92, alpha:1.00)],
+                                  start: .left,
+                                  end: .right)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

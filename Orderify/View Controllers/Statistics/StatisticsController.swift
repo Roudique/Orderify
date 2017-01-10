@@ -8,7 +8,11 @@
 
 import UIKit
 
-let kStatisticCellId = "statisticCellId"
+let kStatisticCellId            = "statisticCellId"
+let kPullLimit : CGFloat        = 150.0
+let kCellHeight : CGFloat       = 136.0
+let kCellHiddenHeight : CGFloat = 54.0
+var kEmptyCellHeight : CGFloat  = 100.0
 
 class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -21,16 +25,19 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
+                                     UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
     }
     
 
 // MARK: - Actions
     
     func showMoreAction(sender: UIButton) {
-        guard let contentView = sender.superview else { return }
-        guard let cell = contentView.superview as? StatisticsCell else { return }
-        
-        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        guard let superView     = sender.superview else { return }
+        guard let contentView   = superView.superview else { return }
+        guard let cell          = contentView.superview as? StatisticsCell else { return }
+        guard let indexPath     = tableView.indexPath(for: cell) else { return }
         
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -55,8 +62,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
 // MARK: - UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("\(scrollView.contentOffset)")
-        if scrollView.contentOffset.y < -150.0 {
+        if scrollView.contentOffset.y < -kPullLimit {
             dismiss(animated: true, completion: nil)
         }
     }
@@ -73,9 +79,9 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if cellIsSelected(indexPath: indexPath) {
-            return 127.0
+            return kCellHeight
         }
-        return 127.0 - 48.0
+        return kCellHeight - kCellHiddenHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,8 +90,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
         if let order = orders?[indexPath.row] {
             cell.configure(with: order)
             cell.showMoreBtn.addTarget(self, action: #selector(showMoreAction(sender:)), for: .touchUpInside)
-            
-
+            cell.addBottomConstraint(veryBottom: cellIsSelected(indexPath: indexPath))
         }
         
         return cell
@@ -101,7 +106,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100.0
+        return kEmptyCellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
