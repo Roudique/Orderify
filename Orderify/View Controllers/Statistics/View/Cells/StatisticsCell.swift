@@ -15,10 +15,13 @@ class StatisticsCell: UITableViewCell {
     @IBOutlet weak var itemsLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-
+    @IBOutlet weak var showMoreBtn: UIButton!
+    @IBOutlet weak var btnBotConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        paidLabel.adjustsFontSizeToFitWidth         = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,6 +46,30 @@ class StatisticsCell: UITableViewCell {
         if order.lineItems.count == 0 { itemsString = "items" }
         
         itemsLabel.text = "$\(order.totalPriceUSD) total, \(order.lineItems.count) " + itemsString
+    }
+    
+    func addBottomConstraint(veryBottom: Bool) {
+        btnBotConstraint.isActive = false
+        
+        if veryBottom {
+            btnBotConstraint = NSLayoutConstraint.init(item: self.showMoreBtn,
+                                                       attribute: .bottom,
+                                                       relatedBy: .equal,
+                                                       toItem: emailLabel,
+                                                       attribute: .bottom,
+                                                       multiplier: 1.0,
+                                                       constant: 0)
+        } else {
+            btnBotConstraint = NSLayoutConstraint.init(item: self.showMoreBtn,
+                                                       attribute: .bottom,
+                                                       relatedBy: .equal,
+                                                       toItem: nameLabel,
+                                                       attribute: .top,
+                                                       multiplier: 1.0,
+                                                       constant: 0)
+        }
+        btnBotConstraint.priority = 1000
+        btnBotConstraint.isActive = true
     }
 
 }
