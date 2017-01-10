@@ -12,6 +12,7 @@ let kStatisticCellId = "statisticCellId"
 
 class StatisticsController: UITableViewController {
     var orders : Array<Order>?
+    var selectedCells = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,12 @@ class StatisticsController: UITableViewController {
         return 0
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if cellIsSelected(indexPath: indexPath) {
+            return 100.0
+        }
+        return 50.0
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kStatisticCellId, for: indexPath)
@@ -43,6 +50,22 @@ class StatisticsController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if cellIsSelected(indexPath: indexPath) {
+            selectedCells.remove(at: selectedCells.index(of: indexPath.row)!)
+        } else {
+            selectedCells.append(indexPath.row)
+        }
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    func cellIsSelected(indexPath: IndexPath) -> Bool {
+        return selectedCells.contains(indexPath.row)
+    }
 
     /*
     // Override to support conditional editing of the table view.

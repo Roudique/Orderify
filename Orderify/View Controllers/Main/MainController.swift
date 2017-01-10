@@ -28,6 +28,7 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
     //MARK: - Actions
     
     @IBAction func parseDefault(_ sender: Any) {
+        view.endEditing(true)
         print("Sent request to server...")
         if let url = URL.init(string: kResourceLink) {
             let session = URLSession.init(configuration: .default,
@@ -62,7 +63,9 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        print("Failed to download :(")
+        if let error = error {
+            print("Failed to download :( Error: \(error.localizedDescription)")
+        }
     }
     
 }

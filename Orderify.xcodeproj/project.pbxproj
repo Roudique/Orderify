@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */; };
+		84197F291E245B410073A7BE /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F281E245B410073A7BE /* BorderedButton.swift */; };
 		8428A12B1E233CFC003532BA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12A1E233CFC003532BA /* Model.swift */; };
 		8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12D1E2345CC003532BA /* StatisticsController.swift */; };
 		843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D01E232FE700B9FF47 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84197F281E245B410073A7BE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = "Custom Classes/Bordered Button/BorderedButton.swift"; sourceTree = "<group>"; };
 		8428A12A1E233CFC003532BA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
 		8428A12D1E2345CC003532BA /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsController.swift; path = "View Controllers/Statistics/StatisticsController.swift"; sourceTree = "<group>"; };
 		843955CD1E232FE700B9FF47 /* Orderify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84197F261E245B140073A7BE /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84197F271E245B1B0073A7BE /* Bordered Button */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		84197F271E245B1B0073A7BE /* Bordered Button */ = {
+			isa = PBXGroup;
+			children = (
+				84197F281E245B410073A7BE /* BorderedButton.swift */,
+			);
+			name = "Bordered Button";
+			sourceTree = "<group>";
+		};
 		8428A12C1E2345AD003532BA /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +139,7 @@
 		843955CF1E232FE700B9FF47 /* Orderify */ = {
 			isa = PBXGroup;
 			children = (
+				84197F261E245B140073A7BE /* Custom Classes */,
 				843955F51E23341300B9FF47 /* Extensions */,
 				843955F11E2332E900B9FF47 /* ViewControllers */,
 				843955F01E23304300B9FF47 /* Model */,
@@ -397,6 +416,7 @@
 			files = (
 				848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */,
 				848AC9731E23E458003324E9 /* Parser.swift in Sources */,
+				84197F291E245B410073A7BE /* BorderedButton.swift in Sources */,
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,
 				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
 				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,

@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wng-4T-EfC">
-                                <rect key="frame" x="0.0" y="221" width="375" height="225"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wng-4T-EfC">
+                                <rect key="frame" x="0.0" y="70" width="375" height="225"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIL-2i-m8l">
                                         <rect key="frame" x="8" y="8" width="359" height="209"/>
@@ -34,7 +34,7 @@ You can insert your link or use default one.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="0.29561750856164382" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="Ch4-X9-5tC"/>
                                     <constraint firstAttribute="trailing" secondItem="sIL-2i-m8l" secondAttribute="trailing" constant="8" id="CwE-fx-4kh"/>
@@ -43,26 +43,45 @@ You can insert your link or use default one.</string>
                                     <constraint firstItem="sIL-2i-m8l" firstAttribute="leading" secondItem="wng-4T-EfC" secondAttribute="leading" constant="8" id="oiX-kq-7Et"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0G-kF-dQq">
-                                <rect key="frame" x="149.5" y="446" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0G-kF-dQq" customClass="BorderedButton" customModule="Orderify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="303" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.29815924657534248" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="BV6-6N-nyQ"/>
-                                    <constraint firstAttribute="width" constant="75" id="ho6-9u-zqD"/>
+                                    <constraint firstAttribute="height" constant="40" id="BV6-6N-nyQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Parse"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <state key="normal" title="Parse default JSON"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="botBorder" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="parseDefault:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4C-BT-2Bd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="...or paste your link here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-ug-3TN">
+                                <rect key="frame" x="0.0" y="351" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JA6-Ro-Wbs"/>
+                                </constraints>
+                                <color key="textColor" red="0.054901960780000002" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sXl-ug-3TN" secondAttribute="trailing" id="4Pb-TO-HQK"/>
+                            <constraint firstItem="A0G-kF-dQq" firstAttribute="top" secondItem="wng-4T-EfC" secondAttribute="bottom" constant="8" id="4f8-hD-gV8"/>
+                            <constraint firstAttribute="trailing" secondItem="A0G-kF-dQq" secondAttribute="trailing" id="6f0-VB-hzj"/>
                             <constraint firstAttribute="trailing" secondItem="wng-4T-EfC" secondAttribute="trailing" id="7lw-18-xTG"/>
+                            <constraint firstItem="sXl-ug-3TN" firstAttribute="top" secondItem="A0G-kF-dQq" secondAttribute="bottom" constant="8" id="AYO-7r-gmT"/>
+                            <constraint firstItem="A0G-kF-dQq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RFY-Jr-FLG"/>
                             <constraint firstItem="wng-4T-EfC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RRL-Dr-5vi"/>
                             <constraint firstItem="A0G-kF-dQq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whp-tk-Laa"/>
-                            <constraint firstItem="A0G-kF-dQq" firstAttribute="top" secondItem="sIL-2i-m8l" secondAttribute="bottom" constant="8" id="gQI-Zp-ROU"/>
-                            <constraint firstItem="wng-4T-EfC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tZS-rY-2h6"/>
+                            <constraint firstItem="wng-4T-EfC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="ZDk-dy-io7"/>
+                            <constraint firstItem="sXl-ug-3TN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zsp-Oh-djl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ncM-ML-pbr"/>
@@ -87,7 +106,7 @@ You can insert your link or use default one.</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cwl-nw-ZeG" id="l8i-3Y-SMj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
