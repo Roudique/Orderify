@@ -10,7 +10,9 @@ import UIKit
 
 let kStatisticCellId = "statisticCellId"
 
-class StatisticsController: UITableViewController {
+class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    
     var orders : Array<Order>?
     var selectedCells = [Int]()
 
@@ -22,35 +24,45 @@ class StatisticsController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     // MARK: - Table view data source
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("\(scrollView.contentOffset)")
+        if scrollView.contentOffset.y < -150.0 {
+            dismiss(animated: true, completion: nil)
+        }
+    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = orders?.count {
             return count
         }
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if cellIsSelected(indexPath: indexPath) {
-            return 100.0
+            return 127.0
         }
-        return 50.0
+        return 127.0 - 48.0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: kStatisticCellId, for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: kStatisticCellId, for: indexPath) as! StatisticsCell
         
         if let order = orders?[indexPath.row] {
-            cell.textLabel?.text = "\(order.email); $\(order.totalPriceUSD)"
+            cell.configure(with: order)
         }
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if cellIsSelected(indexPath: indexPath) {

@@ -16,6 +16,7 @@ class Order : JSONInitializable {
     var paid : Bool?
     var totalPriceUSD : Double
     var lineItems : Array<Item>
+    var customer : Customer?
     
     init(id: Int, name: String, email: String, totalPrice: Double) {
         self.id = id

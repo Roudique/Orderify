@@ -15,17 +15,20 @@ let kResourceLink = "https://shopicruit.myshopify.com/admin/orders.json?page=1&a
 class MainController: UIViewController, URLSessionDownloadDelegate {
     var fileURL : URL?
     
-    //MARK: - ViewController Lifecycle
+//MARK: - ViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
                                      UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
+        
+        let hideKeyboardGR = UITapGestureRecognizer.init(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(hideKeyboardGR)
     }
     
     
-    //MARK: - Actions
+//MARK: - Actions
     
     @IBAction func parseDefault(_ sender: Any) {
         view.endEditing(true)
@@ -41,17 +44,27 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
         
     }
     
+    
+//MARK: - Private
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == kParseSegueId {
             let parser = Parser.init(url: fileURL)
             
             let statisticsController = segue.destination as! StatisticsController
             statisticsController.orders = parser.orders
+            
+            print("About to segue...")
         }
         
     }
     
-    //MARK: - URLSessionDownloadDelegate
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
+//MARK: - URLSessionDownloadDelegate
     
     func urlSession(_ session: URLSession,
                     downloadTask: URLSessionDownloadTask,
@@ -59,7 +72,9 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
         print("GET request finished.")
         fileURL = location
         
-        performSegue(withIdentifier: kParseSegueId, sender: nil)
+        DispatchQueue.main.sync {
+            self.performSegue(withIdentifier: kParseSegueId, sender: nil)
+        }
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {

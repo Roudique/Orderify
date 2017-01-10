@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */; };
 		84197F291E245B410073A7BE /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F281E245B410073A7BE /* BorderedButton.swift */; };
+		84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F2C1E24A3510073A7BE /* StatisticsView.swift */; };
+		84197F301E24A3A90073A7BE /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F2F1E24A3A90073A7BE /* StatisticsCell.swift */; };
 		8428A12B1E233CFC003532BA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12A1E233CFC003532BA /* Model.swift */; };
 		8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12D1E2345CC003532BA /* StatisticsController.swift */; };
 		843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955D01E232FE700B9FF47 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84197F281E245B410073A7BE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = "Custom Classes/Bordered Button/BorderedButton.swift"; sourceTree = "<group>"; };
+		84197F2C1E24A3510073A7BE /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsView.swift; path = "View Controllers/Statistics/View/StatisticsView.swift"; sourceTree = "<group>"; };
+		84197F2F1E24A3A90073A7BE /* StatisticsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsCell.swift; path = "View Controllers/Statistics/View/Cells/StatisticsCell.swift"; sourceTree = "<group>"; };
 		8428A12A1E233CFC003532BA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
 		8428A12D1E2345CC003532BA /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsController.swift; path = "View Controllers/Statistics/StatisticsController.swift"; sourceTree = "<group>"; };
 		843955CD1E232FE700B9FF47 /* Orderify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +103,35 @@
 			name = "Bordered Button";
 			sourceTree = "<group>";
 		};
+		84197F2A1E24A3230073A7BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84197F2B1E24A32D0073A7BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84197F2E1E24A38E0073A7BE /* Cells */,
+				84197F2C1E24A3510073A7BE /* StatisticsView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84197F2E1E24A38E0073A7BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84197F2F1E24A3A90073A7BE /* StatisticsCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		8428A12C1E2345AD003532BA /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				84197F2B1E24A32D0073A7BE /* View */,
+				84197F2A1E24A3230073A7BE /* Controller */,
 				8428A12D1E2345CC003532BA /* StatisticsController.swift */,
 			);
 			name = Statistics;
@@ -419,10 +449,12 @@
 				84197F291E245B410073A7BE /* BorderedButton.swift in Sources */,
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,
 				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
+				84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */,
 				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,
 				843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */,
 				848AC9751E23E463003324E9 /* Address.swift in Sources */,
 				8428A12B1E233CFC003532BA /* Model.swift in Sources */,
+				84197F301E24A3A90073A7BE /* StatisticsCell.swift in Sources */,
 				848AC9711E23E421003324E9 /* Customer.swift in Sources */,
 				843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */,
 				8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */,
