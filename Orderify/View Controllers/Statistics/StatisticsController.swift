@@ -28,6 +28,7 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var graphHeightConstraints: [NSLayoutConstraint]!
 
+    @IBOutlet weak var graphView: UIView!
     @IBOutlet weak var canadaLabel: UILabel!
     @IBOutlet weak var usLabel: UILabel!
     @IBOutlet weak var restLabel: UILabel!
@@ -38,13 +39,7 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     var totalPrice : Double = 0
     var selectedCells = [Int]()
     
-    var graphHeight : CGFloat {
-        var height : CGFloat = 0.0
-        for constraint in graphHeightConstraints {
-            height += constraint.constant
-        }
-        return height
-    }
+    var graphHeight : CGFloat = 0
     
     
     //MARK: - Lifecycle
@@ -70,6 +65,16 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         super.viewWillDisappear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        var height : CGFloat = 0.0
+        for constraint in graphHeightConstraints {
+            height += constraint.constant
+        }
+        graphHeight = height
     }
     
     
@@ -144,6 +149,9 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         if scrollView.contentOffset.y < -kPullLimit {
             dismiss(animated: true, completion: nil)
         }
+        
+        //hide graphView if user scrolled down over it so it doesn't appear during animation
+        graphView.isHidden = scrollView.contentOffset.y > graphHeight
     }
 
     
