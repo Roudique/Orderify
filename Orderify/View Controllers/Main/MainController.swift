@@ -11,6 +11,8 @@ import UIKit
 
 let kParseSegueId = "parseSegue"
 let kResourceLink = "https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
+let kAuthorLink   = "https://github.com/Roudique"
+
 
 class MainController: UIViewController, URLSessionDownloadDelegate {
     var fileURL : URL?
@@ -44,6 +46,12 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
         
     }
     
+    @IBAction func authorAction(_ sender: UIButton) {
+        if let url = URL.init(string: kAuthorLink) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     
 //MARK: - Private
     
@@ -53,10 +61,7 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
             
             let statisticsController = segue.destination as! StatisticsController
             statisticsController.orders = parser.orders
-            
-            print("About to segue...")
         }
-        
     }
     
     func hideKeyboard() {
@@ -69,7 +74,6 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession,
                     downloadTask: URLSessionDownloadTask,
                     didFinishDownloadingTo location: URL) {
-        print("GET request finished.")
         fileURL = location
         
         DispatchQueue.main.sync {

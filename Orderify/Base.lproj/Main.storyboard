@@ -78,6 +78,20 @@ You can insert your link or use default one.</string>
                                     <constraint firstAttribute="height" constant="42" id="bPd-ci-fav"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cl-dr-99M">
+                                <rect key="frame" x="316" y="28" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="5MF-E3-I2b"/>
+                                    <constraint firstAttribute="width" constant="51" id="bOl-1X-fQN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                <state key="normal" title="Author">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="authorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFP-Wz-IWc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -87,12 +101,14 @@ You can insert your link or use default one.</string>
                             <constraint firstAttribute="trailing" secondItem="wng-4T-EfC" secondAttribute="trailing" constant="8" id="7lw-18-xTG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f0W-YD-Qso" secondAttribute="bottom" constant="8" id="7xj-jH-sFU"/>
                             <constraint firstItem="sXl-ug-3TN" firstAttribute="top" secondItem="A0G-kF-dQq" secondAttribute="bottom" constant="8" id="AYO-7r-gmT"/>
+                            <constraint firstItem="5cl-dr-99M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="C2h-Cz-C8G"/>
                             <constraint firstItem="f0W-YD-Qso" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nxa-N8-T7X"/>
                             <constraint firstItem="wng-4T-EfC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="Qs9-M5-abh"/>
                             <constraint firstItem="A0G-kF-dQq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="RFY-Jr-FLG"/>
                             <constraint firstItem="wng-4T-EfC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="RRL-Dr-5vi"/>
                             <constraint firstItem="A0G-kF-dQq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whp-tk-Laa"/>
                             <constraint firstItem="sXl-ug-3TN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Zsp-Oh-djl"/>
+                            <constraint firstAttribute="trailing" secondItem="5cl-dr-99M" secondAttribute="trailing" constant="8" id="bvu-d7-tnA"/>
                             <constraint firstAttribute="trailing" secondItem="f0W-YD-Qso" secondAttribute="trailing" id="jWY-Kf-Abv"/>
                         </constraints>
                     </view>

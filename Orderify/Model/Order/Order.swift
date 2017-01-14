@@ -17,6 +17,7 @@ class Order : JSONInitializable {
     var totalPriceUSD : Double
     var lineItems : Array<Item>
     var customer : Customer?
+    var shippingAddress : Address?
     
     init(id: Int, name: String, email: String, totalPrice: Double) {
         self.id = id
@@ -39,6 +40,7 @@ class Order : JSONInitializable {
             self.totalPriceUSD  = Double.init(price) ?? 0.0
             self.lineItems      = Array<Item>.init()
             self.customer = Customer.init(json: json["customer"])
+            self.shippingAddress = Address.init(json: json[""])
             
             if let financialStatus = json["financial_status"].string {
                 self.paid = financialStatus == "paid"
