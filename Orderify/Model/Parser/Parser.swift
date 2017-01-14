@@ -13,7 +13,7 @@ class Parser {
     var orders : Array<Order>
     
     init() {
-        self.orders = Array<Order>.init()
+        orders = Array<Order>.init()
     }
     
     convenience init(url: URL?) {
@@ -51,6 +51,14 @@ class Parser {
                     
                 }
             }
+        }
+        
+        orders.sort { (first, second) -> Bool in
+            if let id1 = Int.init(first.name.replacingOccurrences(of: "#", with: "")), let id2 = Int.init(second.name.replacingOccurrences(of: "#", with: "")) {
+                return id1 < id2
+            }
+            
+            return true
         }
         
         print("Total price: \(totalPrice)")
