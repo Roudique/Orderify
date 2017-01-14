@@ -22,6 +22,8 @@
 		843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F81E23345100B9FF47 /* UIView+Gradient.swift */; };
 		843955FB1E23391C00B9FF47 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 843955FA1E23391C00B9FF47 /* orders.json */; };
 		8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A31E29A515007EC63A /* UIColor+Orderify.swift */; };
+		8462F1A71E29ACE2007EC63A /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */; };
+		8462F1AA1E29AF81007EC63A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A91E29AF81007EC63A /* BaseViewController.swift */; };
 		848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9651E23E2F9003324E9 /* Address+JSON.swift */; };
 		848AC9691E23E335003324E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9681E23E335003324E9 /* Item.swift */; };
 		848AC96E1E23E3EA003324E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC96D1E23E3EA003324E9 /* Order.swift */; };
@@ -60,6 +62,8 @@
 		843955F81E23345100B9FF47 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		843955FA1E23391C00B9FF47 /* orders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
 		8462F1A31E29A515007EC63A /* UIColor+Orderify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Orderify.swift"; path = "Extensions/UIColor+Orderify.swift"; sourceTree = "<group>"; };
+		8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderDetailsController.swift; path = "View Controllers/Order details/OrderDetailsController.swift"; sourceTree = "<group>"; };
+		8462F1A91E29AF81007EC63A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "View Controllers/Base view controller/BaseViewController.swift"; sourceTree = "<group>"; };
 		848AC9651E23E2F9003324E9 /* Address+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Address+JSON.swift"; path = "Model/Address/Address+JSON.swift"; sourceTree = "<group>"; };
 		848AC9681E23E335003324E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Model/Item/Item.swift; sourceTree = "<group>"; };
 		848AC96D1E23E3EA003324E9 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Model/Order/Order.swift; sourceTree = "<group>"; };
@@ -206,8 +210,10 @@
 		843955F11E2332E900B9FF47 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8462F1A51E29ACB8007EC63A /* Order details */,
 				8428A12C1E2345AD003532BA /* Statistics */,
 				843955F21E2332F000B9FF47 /* Main */,
+				8462F1A81E29AF53007EC63A /* Base view controller */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +253,22 @@
 				843955D71E232FE700B9FF47 /* Assets.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8462F1A51E29ACB8007EC63A /* Order details */ = {
+			isa = PBXGroup;
+			children = (
+				8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */,
+			);
+			name = "Order details";
+			sourceTree = "<group>";
+		};
+		8462F1A81E29AF53007EC63A /* Base view controller */ = {
+			isa = PBXGroup;
+			children = (
+				8462F1A91E29AF81007EC63A /* BaseViewController.swift */,
+			);
+			name = "Base view controller";
 			sourceTree = "<group>";
 		};
 		848AC9671E23E326003324E9 /* Item */ = {
@@ -454,12 +476,14 @@
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,
 				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
 				84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */,
+				8462F1AA1E29AF81007EC63A /* BaseViewController.swift in Sources */,
 				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,
 				843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */,
 				848AC9751E23E463003324E9 /* Address.swift in Sources */,
 				8428A12B1E233CFC003532BA /* Model.swift in Sources */,
 				84197F301E24A3A90073A7BE /* StatisticsCell.swift in Sources */,
 				848AC9711E23E421003324E9 /* Customer.swift in Sources */,
+				8462F1A71E29ACE2007EC63A /* OrderDetailsController.swift in Sources */,
 				843955D11E232FE700B9FF47 /* AppDelegate.swift in Sources */,
 				8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */,
 			);

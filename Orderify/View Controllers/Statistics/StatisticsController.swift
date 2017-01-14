@@ -9,29 +9,56 @@
 import UIKit
 
 let kStatisticCellId            = "statisticCellId"
+
+let kShowOrderSegueId           = "kShowOrderDetailsSegueId"
+
 let kPullLimit : CGFloat        = 150.0
 let kCellHeight : CGFloat       = 136.0
 let kCellHiddenHeight : CGFloat = 54.0
 var kEmptyCellHeight : CGFloat  = 100.0
 
-class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class StatisticsController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var orders : Array<Order>?
     var selectedCells = [Int]()
+    
+    
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
-                                     UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    
+    //MARK: - Private
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kShowOrderSegueId {
+            if let controller = segue.destination as? OrderDetailsController, let order = sender as? Order {
+                controller.order = order
+            }
+        }
     }
     
 
-// MARK: - Actions
+    // MARK: - Actions
     
     func showMoreAction(sender: UIButton) {
         guard let superView     = sender.superview else { return }
@@ -59,7 +86,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-// MARK: - UIScrollViewDelegate
+    // MARK: - UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y < -kPullLimit {
@@ -68,7 +95,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     
-// MARK: - UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = orders?.count {
@@ -97,7 +124,7 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-// MARK: - UITableViewDelegate
+    // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emptyCell")
@@ -110,11 +137,11 @@ class StatisticsController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: kShowOrderSegueId, sender: orders?[indexPath.row])
     }
 
     
-// MARK: - Private
+    // MARK: - Private
     
     func cellIsSelected(indexPath: IndexPath) -> Bool {
         return selectedCells.contains(indexPath.row)

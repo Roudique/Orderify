@@ -14,7 +14,7 @@ let kResourceLink = "https://shopicruit.myshopify.com/admin/orders.json?page=1&a
 let kAuthorLink   = "https://github.com/Roudique"
 
 
-class MainController: UIViewController, URLSessionDownloadDelegate {
+class MainController: BaseViewController, URLSessionDownloadDelegate {
     var fileURL : URL?
     
 //MARK: - ViewController Lifecycle
@@ -22,8 +22,8 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
-                                     UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
+//        view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
+//                                     UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
         
         let hideKeyboardGR = UITapGestureRecognizer.init(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(hideKeyboardGR)
@@ -59,8 +59,10 @@ class MainController: UIViewController, URLSessionDownloadDelegate {
         if segue.identifier == kParseSegueId {
             let parser = Parser.init(url: fileURL)
             
-            let statisticsController = segue.destination as! StatisticsController
-            statisticsController.orders = parser.orders
+            let navController           = segue.destination as! UINavigationController
+            if let statisticsController = navController.viewControllers.first as? StatisticsController {
+                statisticsController.orders = parser.orders
+            }
         }
     }
     
