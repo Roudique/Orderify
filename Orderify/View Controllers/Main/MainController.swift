@@ -22,9 +22,6 @@ class MainController: BaseViewController, URLSessionDownloadDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
-//                                     UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
-        
         let hideKeyboardGR = UITapGestureRecognizer.init(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(hideKeyboardGR)
     }
@@ -59,8 +56,7 @@ class MainController: BaseViewController, URLSessionDownloadDelegate {
         if segue.identifier == kParseSegueId {
             let parser = Parser.init(url: fileURL)
             
-            let navController           = segue.destination as! UINavigationController
-            if let statisticsController = navController.viewControllers.first as? StatisticsController {
+            if let statisticsController = segue.destination as? StatisticsController {
                 statisticsController.orders = parser.orders
             }
         }

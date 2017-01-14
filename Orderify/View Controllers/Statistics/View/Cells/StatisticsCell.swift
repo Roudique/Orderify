@@ -25,7 +25,7 @@ class StatisticsCell: UITableViewCell {
     @IBOutlet weak var showMoreBtn: UIButton!
     @IBOutlet weak var btnBotConstraint: NSLayoutConstraint!
     @IBOutlet weak var wrapperView: UIView!
-    
+    @IBOutlet weak var noLbl: UILabel!
     
     //MARK: - Lifecycle
     

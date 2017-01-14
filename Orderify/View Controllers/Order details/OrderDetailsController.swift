@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Hero
 
-class OrderDetailsController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class OrderDetailsController: BaseViewController,
+                              UITableViewDelegate, UITableViewDataSource,
+                              HeroViewControllerDelegate {
     var order : Order!
 
     @IBOutlet weak var tableView: UITableView!
@@ -19,12 +22,24 @@ class OrderDetailsController: BaseViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var customerNameLbl: UILabel!
     @IBOutlet weak var customerEmailLbl: UILabel!
     
+    @IBOutlet weak var noLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         load(order: order)
+        
+        orderNameLbl.heroID     = "orderNameLabel"
+        orderPriceLbl.heroID    = "itemsLabel"
+        customerNameLbl.heroID  = "customerNameLabel"
+        customerEmailLbl.heroID = "customerEmailLabel"
+        noLabel.heroID          = "noLabel"
     }
     
+    func heroDidEndTransition() {
+        customerNameLbl.heroID = nil
+        customerEmailLbl.heroID = nil
+    }
     
     //MARK: - Private
     

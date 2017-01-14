@@ -8,34 +8,37 @@
 
 import UIKit
 
+let kGramsInKilogram = 1_000
 
 class ItemCell: UITableViewCell {
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var quantityLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var gramsLbl: UILabel!
-    @IBOutlet weak var nameLbl: UILabel!
+    
+    //MARK: - Lifecycle
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        titleLbl.adjustsFontSizeToFitWidth = true
+    }
     
     
-    
+    //MARK: - Public
     
     static func identifier() -> String {
         return "ItemCell"
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+    
     func configure(item: Item) {
-        idLabel.text = "id: \(item.id)"
-        quantityLbl.text = "qnt: \(item.quantity)"
-        titleLbl.text = "title: \(item.title)"
-        priceLbl.text = "price: \(item.price)"
-        gramsLbl.text = "grams: \(item.grams)"
-        nameLbl.text = "name: \(item.name)"
+        titleLbl.text = "Title:  \(item.title)"
+        priceLbl.text = "💵 $\(item.price) x \(item.quantity) = $\(item.price * Double(item.quantity))"
+        
+        if item.grams > kGramsInKilogram {
+            gramsLbl.text = "📦 \(item.grams / kGramsInKilogram).\(item.grams % kGramsInKilogram) kilograms"
+        } else {
+            gramsLbl.text = "📦 \(item.grams) grams"
+        }
     }
 
 }

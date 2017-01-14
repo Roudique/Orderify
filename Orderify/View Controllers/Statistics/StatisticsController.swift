@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 let kStatisticCellId            = "statisticCellId"
 
@@ -138,6 +139,24 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: kShowOrderSegueId, sender: orders?[indexPath.row])
+        
+        let cell = tableView.cellForRow(at: indexPath) as! StatisticsCell
+        cell.orderNameLabel.heroID  = "orderNameLabel"
+        cell.itemsLabel.heroID      = "itemsLabel"
+        cell.nameLabel.heroID       = "customerNameLabel"
+        cell.emailLabel.heroID      = "customerEmailLabel"
+        cell.noLbl.heroID           = "noLabel"
+        
+        if !cellIsSelected(indexPath: indexPath) {
+            cell.nameLabel.heroID = nil
+            cell.emailLabel.heroID = nil
+        }
+        
+        
+        
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        
     }
 
     
