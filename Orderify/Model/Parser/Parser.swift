@@ -10,11 +10,13 @@ import Foundation
 import SwiftyJSON
 
 class Parser {
-    var orders : Array<Order>
+    var orders = Array<Order>()
+    var countries = Dictionary<String, Int>()
+    var totalCost = 0.0
     
-    init() {
-        orders = Array<Order>.init()
-    }
+    static let countryFlags        = ["US" : "🇺🇸",
+                                      "CA" : "🇨🇦"]
+    static let restCountriesFlag   = "🏳️"
     
     convenience init(url: URL?) {
         self.init()
@@ -41,6 +43,14 @@ class Parser {
                     self.orders.append(order)
                     totalPrice += order.totalPriceUSD
                     
+                    if let country = order.customer?.defaultAddress?.countryCode {
+                        if let _ = countries[country] {
+                            countries[country]! += 1
+                        } else {
+                            countries[country] = 1
+                        }
+                    }
+                    
                     if let items = orderJSON["line_items"].array {
                         for itemJSON in items {
                             if let item = Item.init(json: itemJSON) {
@@ -48,7 +58,6 @@ class Parser {
                             }
                         }
                     }
-                    
                 }
             }
         }
@@ -62,5 +71,7 @@ class Parser {
         }
         
         print("Total price: \(totalPrice)")
+        print("Countries: \(countries)")
+        totalCost = totalPrice
     }
 }

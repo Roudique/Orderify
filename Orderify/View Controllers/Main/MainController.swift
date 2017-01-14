@@ -58,6 +58,8 @@ class MainController: BaseViewController, URLSessionDownloadDelegate {
             
             if let statisticsController = segue.destination as? StatisticsController {
                 statisticsController.orders = parser.orders
+                statisticsController.countries = parser.countries
+                statisticsController.totalPrice = parser.totalCost
             }
         }
     }

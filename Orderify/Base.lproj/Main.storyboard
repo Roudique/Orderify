@@ -144,10 +144,72 @@ You can insert your link or use default one.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-iL-lRU">
-                                        <rect key="frame" x="8" y="20" width="359" height="80"/>
+                                        <rect key="frame" x="8" y="20" width="359" height="133"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders count by customer's country:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-TG-UnX">
+                                                <rect key="frame" x="8" y="4" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="sxF-FF-lDr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-Gh-rWb">
+                                                <rect key="frame" x="8" y="29" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="PHQ-fC-eg6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCq-42-E3Y">
+                                                <rect key="frame" x="8" y="79" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="RVv-ua-IV3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDO-Yh-28t">
+                                                <rect key="frame" x="8" y="54" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="oNN-i4-dI5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjS-GB-plX">
+                                                <rect key="frame" x="8" y="108" width="343" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="MkY-f3-6PF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.59605094179999996" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="oWF-yl-hJB"/>
+                                            <constraint firstItem="Bnn-Gh-rWb" firstAttribute="leading" secondItem="6hZ-iL-lRU" secondAttribute="leading" constant="8" id="8wT-ap-NzX"/>
+                                            <constraint firstAttribute="trailing" secondItem="cJJ-TG-UnX" secondAttribute="trailing" constant="8" id="Eap-I6-I9v"/>
+                                            <constraint firstAttribute="trailing" secondItem="VDO-Yh-28t" secondAttribute="trailing" constant="8" id="GY8-gd-Emw"/>
+                                            <constraint firstItem="LjS-GB-plX" firstAttribute="leading" secondItem="6hZ-iL-lRU" secondAttribute="leading" constant="8" id="fYh-nF-EYV"/>
+                                            <constraint firstAttribute="trailing" secondItem="LjS-GB-plX" secondAttribute="trailing" constant="8" id="fq1-eK-4ex"/>
+                                            <constraint firstItem="yCq-42-E3Y" firstAttribute="top" secondItem="VDO-Yh-28t" secondAttribute="bottom" constant="4" id="g4W-Gk-KhE"/>
+                                            <constraint firstItem="yCq-42-E3Y" firstAttribute="leading" secondItem="6hZ-iL-lRU" secondAttribute="leading" constant="8" id="gPe-Dt-hMO"/>
+                                            <constraint firstItem="LjS-GB-plX" firstAttribute="top" secondItem="yCq-42-E3Y" secondAttribute="bottom" constant="8" id="hH0-yD-D8f"/>
+                                            <constraint firstAttribute="trailing" secondItem="yCq-42-E3Y" secondAttribute="trailing" constant="8" id="jkX-3m-oZB"/>
+                                            <constraint firstItem="cJJ-TG-UnX" firstAttribute="top" secondItem="6hZ-iL-lRU" secondAttribute="top" constant="4" id="jrM-w0-eKs"/>
+                                            <constraint firstItem="cJJ-TG-UnX" firstAttribute="leading" secondItem="6hZ-iL-lRU" secondAttribute="leading" constant="8" id="m0T-DD-ucA"/>
+                                            <constraint firstAttribute="height" constant="133" id="oWF-yl-hJB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bnn-Gh-rWb" secondAttribute="trailing" constant="8" id="qmR-ZZ-gsy"/>
+                                            <constraint firstItem="Bnn-Gh-rWb" firstAttribute="top" secondItem="cJJ-TG-UnX" secondAttribute="bottom" constant="4" id="qqr-9e-LmI"/>
+                                            <constraint firstItem="VDO-Yh-28t" firstAttribute="top" secondItem="Bnn-Gh-rWb" secondAttribute="bottom" constant="4" id="uuL-04-7e7"/>
+                                            <constraint firstItem="VDO-Yh-28t" firstAttribute="leading" secondItem="6hZ-iL-lRU" secondAttribute="leading" constant="8" id="zrU-j5-bnU"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="graph"/>
@@ -156,24 +218,23 @@ You can insert your link or use default one.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graphics will go here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-WL-UEB">
-                                        <rect key="frame" x="8" y="35" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull down to close" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl5-r8-8vF">
+                                        <rect key="frame" x="117.5" y="157" width="140.5" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="sNK-hh-PG8"/>
+                                            <constraint firstAttribute="height" constant="21" id="pfI-s8-OfL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6hZ-iL-lRU" secondAttribute="trailing" constant="8" id="QXC-GI-Z3m"/>
-                                    <constraint firstAttribute="trailing" secondItem="x2g-WL-UEB" secondAttribute="trailing" constant="8" id="T85-L0-FO5"/>
+                                    <constraint firstItem="Jl5-r8-8vF" firstAttribute="centerX" secondItem="H2K-yA-bYV" secondAttribute="centerX" id="UEK-l3-3z2"/>
                                     <constraint firstItem="6hZ-iL-lRU" firstAttribute="leading" secondItem="H2K-yA-bYV" secondAttribute="leading" constant="8" id="UJC-kc-exO"/>
+                                    <constraint firstItem="Jl5-r8-8vF" firstAttribute="top" secondItem="6hZ-iL-lRU" secondAttribute="bottom" constant="4" id="ZIs-p2-20E"/>
                                     <constraint firstItem="6hZ-iL-lRU" firstAttribute="top" secondItem="H2K-yA-bYV" secondAttribute="top" constant="20" id="cbO-3Q-wDY"/>
-                                    <constraint firstItem="x2g-WL-UEB" firstAttribute="top" secondItem="H2K-yA-bYV" secondAttribute="top" constant="35" id="iEY-rY-pgp"/>
-                                    <constraint firstItem="x2g-WL-UEB" firstAttribute="leading" secondItem="H2K-yA-bYV" secondAttribute="leading" constant="8" id="zsF-va-1y2"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jPa-fO-J5X">
@@ -343,7 +404,14 @@ You can insert your link or use default one.</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="canadaLabel" destination="Bnn-Gh-rWb" id="3Sg-fC-Tyn"/>
+                        <outlet property="restLabel" destination="yCq-42-E3Y" id="te4-WG-rkE"/>
                         <outlet property="tableView" destination="jPa-fO-J5X" id="KsV-ni-UDh"/>
+                        <outlet property="totalPriceLabel" destination="LjS-GB-plX" id="YmT-S7-TL9"/>
+                        <outlet property="usLabel" destination="VDO-Yh-28t" id="iit-AL-ZK0"/>
+                        <outletCollection property="graphHeightConstraints" destination="oWF-yl-hJB" collectionClass="NSMutableArray" id="3mf-IM-4pA"/>
+                        <outletCollection property="graphHeightConstraints" destination="ZIs-p2-20E" collectionClass="NSMutableArray" id="6yY-SK-PWa"/>
+                        <outletCollection property="graphHeightConstraints" destination="pfI-s8-OfL" collectionClass="NSMutableArray" id="y6A-UL-EXV"/>
                         <segue destination="YLu-le-UkZ" kind="presentation" identifier="kShowOrderDetailsSegueId" id="NED-Gl-ieF"/>
                     </connections>
                 </viewController>

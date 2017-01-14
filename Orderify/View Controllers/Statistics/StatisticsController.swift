@@ -22,14 +22,29 @@ let kHeroNoID                   = "noLabel"
 let kPullLimit : CGFloat        = 150.0
 let kCellHeight : CGFloat       = 136.0
 let kCellHiddenHeight : CGFloat = 54.0
-var kEmptyCellHeight : CGFloat  = 100.0
 
 
 class StatisticsController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var graphHeightConstraints: [NSLayoutConstraint]!
+
+    @IBOutlet weak var canadaLabel: UILabel!
+    @IBOutlet weak var usLabel: UILabel!
+    @IBOutlet weak var restLabel: UILabel!
+    @IBOutlet weak var totalPriceLabel: UILabel!
     
     var orders : Array<Order>?
+    var countries : Dictionary<String, Int>?
+    var totalPrice : Double = 0
     var selectedCells = [Int]()
+    
+    var graphHeight : CGFloat {
+        var height : CGFloat = 0.0
+        for constraint in graphHeightConstraints {
+            height += constraint.constant
+        }
+        return height
+    }
     
     
     //MARK: - Lifecycle
@@ -40,6 +55,9 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         tableView.heroModifiers = [.fade, .scale(0.5)]
+        
+        prepareCountriesStats()
+        prepareTotalPrice()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +81,32 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
                 controller.order = order
             }
         }
+    }
+    
+    func prepareCountriesStats() {
+        if let countries = countries {
+            if let canadianFlag = Parser.countryFlags["CA"] {
+                let canadianOrders = countries["CA"] ?? 0
+                canadaLabel.text = "\(canadianFlag): \(canadianOrders)"
+            }
+            
+            if let usFlag = Parser.countryFlags["US"] {
+                let usOrders = countries["US"] ?? 0
+                usLabel.text = "\(usFlag): \(usOrders)"
+            }
+            
+            var restOrders = 0
+            for country in countries {
+                if !["US", "CA"].contains(country.key) {
+                    restOrders += country.value
+                }
+            }
+            restLabel.text = "\(Parser.restCountriesFlag): \(restOrders)"
+        }
+    }
+    
+    func prepareTotalPrice() {
+        totalPriceLabel.text = "Total orders' cost: \(totalPrice) USD"
     }
     
 
@@ -141,7 +185,7 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return kEmptyCellHeight
+        return graphHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
