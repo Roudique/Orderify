@@ -15,6 +15,10 @@ class BaseViewController: UIViewController {
         
         view.applyGradient(colours: [UIColor(red:0.13, green:0.23, blue:0.36, alpha:1.00),
                                      UIColor(red:0.55, green:0.53, blue:0.62, alpha:1.00)])
+        
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

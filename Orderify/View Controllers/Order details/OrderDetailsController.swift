@@ -29,11 +29,11 @@ class OrderDetailsController: BaseViewController,
 
         load(order: order)
         
-        orderNameLbl.heroID     = "orderNameLabel"
-        orderPriceLbl.heroID    = "itemsLabel"
-        customerNameLbl.heroID  = "customerNameLabel"
-        customerEmailLbl.heroID = "customerEmailLabel"
-        noLabel.heroID          = "noLabel"
+        orderNameLbl.heroID     = kHeroOrderNameID
+        orderPriceLbl.heroID    = kHeroItemID
+        customerNameLbl.heroID  = kHeroCustomerNameID
+        customerEmailLbl.heroID = kHeroCustomerEmailID
+        noLabel.heroID          = kHeroNoID
     }
     
     func heroDidEndTransition() {

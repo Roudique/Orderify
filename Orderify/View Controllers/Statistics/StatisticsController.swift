@@ -13,6 +13,12 @@ let kStatisticCellId            = "statisticCellId"
 
 let kShowOrderSegueId           = "kShowOrderDetailsSegueId"
 
+let kHeroOrderNameID            = "orderNameLabel"
+let kHeroItemID                 = "itemsLabel"
+let kHeroCustomerNameID         = "customerNameLabel"
+let kHeroCustomerEmailID        = "customerEmailLabel"
+let kHeroNoID                   = "noLabel"
+
 let kPullLimit : CGFloat        = 150.0
 let kCellHeight : CGFloat       = 136.0
 let kCellHiddenHeight : CGFloat = 54.0
@@ -141,22 +147,19 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         performSegue(withIdentifier: kShowOrderSegueId, sender: orders?[indexPath.row])
         
         let cell = tableView.cellForRow(at: indexPath) as! StatisticsCell
-        cell.orderNameLabel.heroID  = "orderNameLabel"
-        cell.itemsLabel.heroID      = "itemsLabel"
-        cell.nameLabel.heroID       = "customerNameLabel"
-        cell.emailLabel.heroID      = "customerEmailLabel"
-        cell.noLbl.heroID           = "noLabel"
+        cell.orderNameLabel.heroID  = kHeroOrderNameID
+        cell.itemsLabel.heroID      = kHeroItemID
+        cell.nameLabel.heroID       = kHeroCustomerNameID
+        cell.emailLabel.heroID      = kHeroCustomerEmailID
+        cell.noLbl.heroID           = kHeroNoID
         
         if !cellIsSelected(indexPath: indexPath) {
             cell.nameLabel.heroID = nil
             cell.emailLabel.heroID = nil
         }
         
-        
-        
         view.setNeedsLayout()
         view.layoutIfNeeded()
-        
     }
 
     
