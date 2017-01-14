@@ -151,16 +151,6 @@ You can insert your link or use default one.</string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-Zv-u8E">
                                                     <rect key="frame" x="0.0" y="4" width="377" height="132"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1488" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ9-oV-rvH">
-                                                            <rect key="frame" x="8" y="8" width="40" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="40" id="A3h-9s-MVh"/>
-                                                                <constraint firstAttribute="height" constant="21" id="qld-Lq-S1g"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
-                                                            <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPh-ES-vR4">
                                                             <rect key="frame" x="56" y="8" width="313" height="30"/>
                                                             <constraints>
@@ -171,7 +161,7 @@ You can insert your link or use default one.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxL-4w-5IG">
-                                                            <rect key="frame" x="8" y="99" width="284" height="21"/>
+                                                            <rect key="frame" x="41" y="99" width="236" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="4hM-RM-aPx"/>
                                                             </constraints>
@@ -180,7 +170,7 @@ You can insert your link or use default one.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-wK-DGW">
-                                                            <rect key="frame" x="8" y="76" width="284" height="21"/>
+                                                            <rect key="frame" x="41" y="76" width="236" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="bmg-u1-VN8"/>
                                                             </constraints>
@@ -198,10 +188,7 @@ You can insert your link or use default one.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39y-Pu-Fct">
-                                                            <rect key="frame" x="8" y="33" width="40" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="GRt-eC-o12"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="8" y="38" width="40" height="21"/>
                                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                                             <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -213,31 +200,51 @@ You can insert your link or use default one.</string>
                                                                 <constraint firstAttribute="height" constant="30" id="e9b-vI-M18"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
-                                                            <state key="normal" title="show more">
+                                                            <state key="normal" title="Show more">
                                                                 <color key="titleColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLY-Oj-Bdx">
+                                                            <rect key="frame" x="8" y="76" width="25" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="tc6-BF-8CO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                                            <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lti-ad-mVy">
+                                                            <rect key="frame" x="8" y="8" width="40" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.12941176469999999" green="0.23137254900000001" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="39y-Pu-Fct" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="8" id="3Jx-Q6-g4D"/>
+                                                        <constraint firstItem="cLY-Oj-Bdx" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="8" id="3gT-Bk-k13"/>
                                                         <constraint firstItem="hxL-4w-5IG" firstAttribute="top" secondItem="mFs-wK-DGW" secondAttribute="bottom" constant="2" id="40G-MM-yoR"/>
+                                                        <constraint firstItem="mFs-wK-DGW" firstAttribute="leading" secondItem="cLY-Oj-Bdx" secondAttribute="trailing" constant="8" id="4eT-oE-mKQ"/>
                                                         <constraint firstItem="hxL-4w-5IG" firstAttribute="trailing" secondItem="mFs-wK-DGW" secondAttribute="trailing" id="9cR-0q-gud"/>
+                                                        <constraint firstItem="39y-Pu-Fct" firstAttribute="top" secondItem="OG7-QK-48F" secondAttribute="top" id="Cpq-3m-d7T"/>
                                                         <constraint firstItem="OG7-QK-48F" firstAttribute="width" secondItem="hPh-ES-vR4" secondAttribute="width" id="EEs-Uz-Wcq"/>
+                                                        <constraint firstItem="39y-Pu-Fct" firstAttribute="height" secondItem="OG7-QK-48F" secondAttribute="height" id="H6A-C7-dfx"/>
                                                         <constraint firstItem="hPh-ES-vR4" firstAttribute="top" secondItem="Dmc-Zv-u8E" secondAttribute="top" constant="8" id="IdU-FY-P1g"/>
-                                                        <constraint firstItem="hPh-ES-vR4" firstAttribute="leading" secondItem="sQ9-oV-rvH" secondAttribute="trailing" constant="8" id="JfL-gK-mlx"/>
-                                                        <constraint firstItem="39y-Pu-Fct" firstAttribute="top" secondItem="sQ9-oV-rvH" secondAttribute="bottom" constant="4" id="LTX-q0-hly"/>
+                                                        <constraint firstItem="lti-ad-mVy" firstAttribute="top" secondItem="hPh-ES-vR4" secondAttribute="top" id="NKo-lf-efU"/>
                                                         <constraint firstItem="OG7-QK-48F" firstAttribute="top" secondItem="hPh-ES-vR4" secondAttribute="bottom" id="OBI-tM-RQm"/>
+                                                        <constraint firstItem="lti-ad-mVy" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="8" id="S49-hS-eaa"/>
                                                         <constraint firstItem="hxL-4w-5IG" firstAttribute="leading" secondItem="mFs-wK-DGW" secondAttribute="leading" id="TEe-r3-17M"/>
                                                         <constraint firstAttribute="trailing" secondItem="ATr-JS-6rZ" secondAttribute="trailing" constant="39" id="TUv-3S-kW8"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mFs-wK-DGW" secondAttribute="trailing" constant="85" id="XFT-0n-UtH"/>
                                                         <constraint firstItem="OG7-QK-48F" firstAttribute="trailing" secondItem="hPh-ES-vR4" secondAttribute="trailing" id="XdM-nL-YvW"/>
                                                         <constraint firstItem="OG7-QK-48F" firstAttribute="leading" secondItem="hPh-ES-vR4" secondAttribute="leading" id="Xh1-gg-4Jk"/>
-                                                        <constraint firstItem="sQ9-oV-rvH" firstAttribute="top" secondItem="Dmc-Zv-u8E" secondAttribute="top" constant="8" id="ca8-6a-mYu"/>
                                                         <constraint firstAttribute="trailing" secondItem="hPh-ES-vR4" secondAttribute="trailing" constant="8" id="fHe-er-6Hp"/>
-                                                        <constraint firstItem="sQ9-oV-rvH" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="8" id="fMW-lI-sot"/>
+                                                        <constraint firstItem="cLY-Oj-Bdx" firstAttribute="top" secondItem="mFs-wK-DGW" secondAttribute="top" id="gkI-9F-QOs"/>
+                                                        <constraint firstItem="cLY-Oj-Bdx" firstAttribute="height" secondItem="mFs-wK-DGW" secondAttribute="height" id="hL8-kh-WQK"/>
                                                         <constraint firstItem="mFs-wK-DGW" firstAttribute="top" secondItem="OG7-QK-48F" secondAttribute="bottom" constant="17" id="pjg-Ek-ZcF"/>
-                                                        <constraint firstItem="mFs-wK-DGW" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="8" id="sxw-P6-CcD"/>
+                                                        <constraint firstItem="hPh-ES-vR4" firstAttribute="leading" secondItem="Dmc-Zv-u8E" secondAttribute="leading" constant="56" id="qb6-G4-RJX"/>
+                                                        <constraint firstItem="lti-ad-mVy" firstAttribute="width" secondItem="39y-Pu-Fct" secondAttribute="width" id="sdf-EO-4eD"/>
+                                                        <constraint firstItem="mFs-wK-DGW" firstAttribute="trailing" secondItem="ATr-JS-6rZ" secondAttribute="leading" constant="-3" id="v1I-e7-lhA"/>
+                                                        <constraint firstItem="lti-ad-mVy" firstAttribute="height" secondItem="hPh-ES-vR4" secondAttribute="height" id="v1M-8u-hJV"/>
                                                         <constraint firstItem="OG7-QK-48F" firstAttribute="leading" secondItem="39y-Pu-Fct" secondAttribute="trailing" constant="8" id="vn5-al-TUg"/>
                                                         <constraint firstItem="ATr-JS-6rZ" firstAttribute="bottom" secondItem="mFs-wK-DGW" secondAttribute="top" id="xPo-GQ-ilC"/>
                                                     </constraints>
@@ -257,7 +264,6 @@ You can insert your link or use default one.</string>
                                             <outlet property="itemsLabel" destination="OG7-QK-48F" id="Hjn-hA-WeR"/>
                                             <outlet property="nameLabel" destination="mFs-wK-DGW" id="J7Y-Vt-iWj"/>
                                             <outlet property="orderNameLabel" destination="hPh-ES-vR4" id="XM3-h6-GJc"/>
-                                            <outlet property="orderNumberLabel" destination="sQ9-oV-rvH" id="GAU-7f-0pf"/>
                                             <outlet property="paidLabel" destination="39y-Pu-Fct" id="djW-Xw-m3f"/>
                                             <outlet property="showMoreBtn" destination="ATr-JS-6rZ" id="rX9-Ir-bcI"/>
                                             <outlet property="wrapperView" destination="Dmc-Zv-u8E" id="ULx-zU-1dq"/>

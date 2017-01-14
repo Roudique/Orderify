@@ -8,8 +8,15 @@
 
 import UIKit
 
+
+let kShowMore = "Show more"
+let kShowLess = "Show less"
+
+let kPaid     = "paid"
+let kNotPaid  = "not paid"
+
+
 class StatisticsCell: UITableViewCell {
-    @IBOutlet weak var orderNumberLabel: UILabel!
     @IBOutlet weak var orderNameLabel: UILabel!
     @IBOutlet weak var paidLabel: UILabel!
     @IBOutlet weak var itemsLabel: UILabel!
@@ -19,30 +26,35 @@ class StatisticsCell: UITableViewCell {
     @IBOutlet weak var btnBotConstraint: NSLayoutConstraint!
     @IBOutlet weak var wrapperView: UIView!
     
+    
+    //MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         paidLabel.adjustsFontSizeToFitWidth = true
-        wrapperView.applyGradient(colors: [UIColor(red:0.54, green:0.69, blue:0.79, alpha:1.00),
-                                           UIColor(red:0.83, green:0.88, blue:0.92, alpha:1.00)],
+        wrapperView.applyGradient(colors: [UIColor(red:0.68, green:0.80, blue:0.91, alpha:1.00),
+                                           UIColor(red:0.47, green:0.62, blue:0.76, alpha:1.00)
+                                           ],
                                   start: .left,
                                   end: .right)
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        nameLabel.adjustsFontSizeToFitWidth  = true
+        emailLabel.adjustsFontSizeToFitWidth = true
+        
     }
     
+    
+    //MARK: - Public
+    
     func configure(with order: Order) {
-        orderNameLabel.text = "\(order.id)"
-        orderNumberLabel.text = order.name
+        orderNameLabel.text = order.name
+        
         if let paid = order.paid {
-            paidLabel.text = paid ? "paid" : "not paid"
-
+            paidLabel.text      = paid ? kPaid : kNotPaid
+            paidLabel.textColor = paid ? .statisticCellPaidColor() : .statisticCellNotPaidColor()
         }
+        
         if let customer = order.customer {
             nameLabel.text = "\(customer.firstName) \(customer.lastName)"
             emailLabel.text = order.customer?.email
@@ -76,6 +88,9 @@ class StatisticsCell: UITableViewCell {
         }
         btnBotConstraint.priority = 1000
         btnBotConstraint.isActive = true
+        
+        let showText = veryBottom ? kShowLess : kShowMore
+        self.showMoreBtn.setTitle(showText, for: .normal)
     }
 
 }
