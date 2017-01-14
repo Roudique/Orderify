@@ -39,6 +39,7 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.heroModifiers = [.fade, .scale(0.5)]
     }
     
     override func viewWillAppear(_ animated: Bool) {

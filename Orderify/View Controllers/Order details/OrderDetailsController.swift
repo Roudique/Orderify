@@ -23,6 +23,8 @@ class OrderDetailsController: BaseViewController,
     @IBOutlet weak var customerEmailLbl: UILabel!
     
     @IBOutlet weak var noLabel: UILabel!
+    @IBOutlet weak var infoBtn: UIButton!
+    @IBOutlet weak var personIconImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,10 @@ class OrderDetailsController: BaseViewController,
         customerNameLbl.heroID  = kHeroCustomerNameID
         customerEmailLbl.heroID = kHeroCustomerEmailID
         noLabel.heroID          = kHeroNoID
+        
+        infoBtn.heroModifiers = [.fade, .scale(0.5)]
+        personIconImageView.heroModifiers = [.fade, .scale(0.5)]
+        tableView.heroModifiers = [.fade, .scale(0.5)]
     }
     
     func heroDidEndTransition() {
