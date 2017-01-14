@@ -1,15 +1,18 @@
 PODS:
   - Hero (0.1.0)
+  - NVActivityIndicatorView (3.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Hero
+  - NVActivityIndicatorView
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Hero: 14038043c41ea53ba1aa43b4d3655f377d78bea6
+  NVActivityIndicatorView: 28942c18ced111a6a3ce5e6f5b27d9d40116d639
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 437ba62511698ac85c49b4508d95665388deb595
+PODFILE CHECKSUM: 0aeb61c0e0f5495925d63551ee01b955ad5a2afb
 
 COCOAPODS: 1.2.0.beta.3

@@ -4,5 +4,6 @@ target 'Orderify' do
 
   pod 'SwiftyJSON'
   pod 'Hero'
+  pod 'NVActivityIndicatorView'
 
 end

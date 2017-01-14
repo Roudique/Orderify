@@ -98,6 +98,7 @@
 		84197F261E245B140073A7BE /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84A29A511E2ADE6D00B46171 /* LoadingAnimationView */,
 				84197F271E245B1B0073A7BE /* Bordered Button */,
 			);
 			name = "Custom Classes";
@@ -320,6 +321,13 @@
 				848AC9701E23E421003324E9 /* Customer.swift */,
 			);
 			name = Customer;
+			sourceTree = "<group>";
+		};
+		84A29A511E2ADE6D00B46171 /* LoadingAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LoadingAnimationView;
 			sourceTree = "<group>";
 		};
 		A0881F7D2A3B26A620175255 /* Frameworks */ = {

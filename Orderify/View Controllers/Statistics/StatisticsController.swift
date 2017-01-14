@@ -19,7 +19,6 @@ let kHeroCustomerNameID         = "customerNameLabel"
 let kHeroCustomerEmailID        = "customerEmailLabel"
 let kHeroNoID                   = "noLabel"
 
-let kPullLimit : CGFloat        = 150.0
 let kCellHeight : CGFloat       = 136.0
 let kCellHiddenHeight : CGFloat = 54.0
 
@@ -41,6 +40,7 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     
     var graphHeight : CGFloat = 0
     
+    let kPullLimit : CGFloat = UIScreen.main.bounds.height / 5.0
     
     //MARK: - Lifecycle
 
