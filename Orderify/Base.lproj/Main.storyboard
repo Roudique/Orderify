@@ -404,6 +404,90 @@ You can insert your link or use default one.</string>
                                 </constraints>
                                 <state key="normal" image="info_gray"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kle-6a-gak">
+                                <rect key="frame" x="0.0" y="258" width="375" height="409"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="100" id="Ul7-mu-RjV" customClass="ItemCell" customModule="Orderify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ul7-mu-RjV" id="25a-68-LSG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0U-io-x8U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N12-TH-pvj">
+                                                            <rect key="frame" x="8" y="8" width="106" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksN-7x-PM0">
+                                                            <rect key="frame" x="137" y="8" width="112" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-Mz-P1n">
+                                                            <rect key="frame" x="257" y="8" width="97" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r96-xQ-j8o">
+                                                            <rect key="frame" x="23" y="43" width="102" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMs-OS-BmU">
+                                                            <rect key="frame" x="137" y="43" width="100" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5r-sQ-3Qa">
+                                                            <rect key="frame" x="257" y="43" width="97" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.25490196079999999" green="0.30196078430000001" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="k0U-io-x8U" secondAttribute="bottom" constant="5" id="TRX-yI-fuf"/>
+                                                <constraint firstAttribute="trailing" secondItem="k0U-io-x8U" secondAttribute="trailing" id="VDQ-Tl-h9e"/>
+                                                <constraint firstItem="k0U-io-x8U" firstAttribute="top" secondItem="25a-68-LSG" secondAttribute="top" id="ela-Lr-GQp"/>
+                                                <constraint firstItem="k0U-io-x8U" firstAttribute="leading" secondItem="25a-68-LSG" secondAttribute="leading" id="kZs-1z-RXB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="gramsLbl" destination="yMs-OS-BmU" id="3CD-e3-Wq7"/>
+                                            <outlet property="idLabel" destination="N12-TH-pvj" id="ZpA-do-XYS"/>
+                                            <outlet property="nameLbl" destination="O5r-sQ-3Qa" id="68F-tV-5Yc"/>
+                                            <outlet property="priceLbl" destination="r96-xQ-j8o" id="Q6z-F0-R2v"/>
+                                            <outlet property="quantityLbl" destination="ksN-7x-PM0" id="qY2-Av-qdK"/>
+                                            <outlet property="titleLbl" destination="XcI-Mz-P1n" id="XQp-GX-n5V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YLu-le-UkZ" id="7nT-JF-5qY"/>
+                                    <outlet property="delegate" destination="YLu-le-UkZ" id="oqa-7u-jhB"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -419,6 +503,7 @@ You can insert your link or use default one.</string>
                             <constraint firstItem="WJc-fr-UjK" firstAttribute="top" secondItem="j0C-vV-Jzd" secondAttribute="top" id="KCY-4o-AcD"/>
                             <constraint firstItem="fzS-TZ-jCh" firstAttribute="trailing" secondItem="AM6-mb-hbC" secondAttribute="trailing" id="MaH-lT-32H"/>
                             <constraint firstItem="SF1-NS-Irn" firstAttribute="leading" secondItem="iJy-GW-DXn" secondAttribute="leading" constant="8" id="Q2S-kN-Tqy"/>
+                            <constraint firstAttribute="trailing" secondItem="Kle-6a-gak" secondAttribute="trailing" id="Tm6-HQ-cvw"/>
                             <constraint firstItem="AM6-mb-hbC" firstAttribute="leading" secondItem="SF1-NS-Irn" secondAttribute="trailing" constant="8" id="VY9-te-xlh"/>
                             <constraint firstItem="AM6-mb-hbC" firstAttribute="height" secondItem="SF1-NS-Irn" secondAttribute="height" id="WRg-Z7-LJr"/>
                             <constraint firstItem="N0t-Qu-KBs" firstAttribute="top" secondItem="SF1-NS-Irn" secondAttribute="bottom" constant="8" id="Wym-lI-a0g"/>
@@ -426,11 +511,14 @@ You can insert your link or use default one.</string>
                             <constraint firstItem="147-nY-c4q" firstAttribute="bottom" secondItem="j0C-vV-Jzd" secondAttribute="bottom" id="d9c-9u-Iel"/>
                             <constraint firstItem="pGw-6T-O1I" firstAttribute="leading" secondItem="WJc-fr-UjK" secondAttribute="trailing" constant="8" id="ead-oR-9Sy"/>
                             <constraint firstItem="j0C-vV-Jzd" firstAttribute="top" secondItem="fzS-TZ-jCh" secondAttribute="bottom" constant="8" id="eqx-SX-vSo"/>
+                            <constraint firstItem="Kle-6a-gak" firstAttribute="top" secondItem="VA9-Mx-OVD" secondAttribute="bottom" constant="4" id="ev7-l6-4rx"/>
                             <constraint firstItem="j0C-vV-Jzd" firstAttribute="leading" secondItem="iJy-GW-DXn" secondAttribute="leading" constant="8" id="jL0-gV-lcH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AM6-mb-hbC" secondAttribute="trailing" constant="8" id="jU4-ew-Aiu"/>
                             <constraint firstItem="AM6-mb-hbC" firstAttribute="top" secondItem="SF1-NS-Irn" secondAttribute="top" id="jVa-kM-KVg"/>
                             <constraint firstItem="147-nY-c4q" firstAttribute="leading" secondItem="j0C-vV-Jzd" secondAttribute="trailing" constant="20" id="jt6-nL-IHL"/>
+                            <constraint firstItem="Kle-6a-gak" firstAttribute="leading" secondItem="iJy-GW-DXn" secondAttribute="leading" id="kEK-Eg-qjv"/>
                             <constraint firstItem="N0t-Qu-KBs" firstAttribute="height" secondItem="SF1-NS-Irn" secondAttribute="height" id="nVa-kv-zrD"/>
+                            <constraint firstItem="PjK-Qe-La7" firstAttribute="top" secondItem="Kle-6a-gak" secondAttribute="bottom" id="rol-fc-SEE"/>
                             <constraint firstItem="pGw-6T-O1I" firstAttribute="leading" secondItem="147-nY-c4q" secondAttribute="trailing" constant="8" id="xIN-Ay-vJn"/>
                             <constraint firstAttribute="trailing" secondItem="VA9-Mx-OVD" secondAttribute="trailing" constant="8" id="xcm-BB-umt"/>
                             <constraint firstItem="fzS-TZ-jCh" firstAttribute="top" secondItem="N0t-Qu-KBs" secondAttribute="top" id="yxH-IQ-6ya"/>
@@ -441,6 +529,7 @@ You can insert your link or use default one.</string>
                         <outlet property="customerNameLbl" destination="WJc-fr-UjK" id="D0b-7s-9Oq"/>
                         <outlet property="orderNameLbl" destination="AM6-mb-hbC" id="OxN-O6-Cwu"/>
                         <outlet property="orderPriceLbl" destination="fzS-TZ-jCh" id="rVR-OZ-ITd"/>
+                        <outlet property="tableView" destination="Kle-6a-gak" id="aRs-qE-0wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gu-MS-Lty" userLabel="First Responder" sceneMemberID="firstResponder"/>

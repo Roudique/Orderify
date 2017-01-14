@@ -8,9 +8,11 @@
 
 import UIKit
 
-class OrderDetailsController: BaseViewController {
+class OrderDetailsController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     var order : Order!
 
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var orderNameLbl: UILabel!
     @IBOutlet weak var orderPriceLbl: UILabel!
     
@@ -37,5 +39,23 @@ class OrderDetailsController: BaseViewController {
             customerNameLbl.text    = ""
             customerEmailLbl.text   = ""
         }
+    }
+    
+    
+    //MARK: - UITableViewDelegate
+    
+    
+    //MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return order.lineItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItemCell.identifier()) as! ItemCell
+        
+        cell.configure(item: order.lineItems[indexPath.row])
+        
+        return cell
     }
 }

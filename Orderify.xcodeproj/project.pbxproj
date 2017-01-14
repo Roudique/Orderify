@@ -24,6 +24,7 @@
 		8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A31E29A515007EC63A /* UIColor+Orderify.swift */; };
 		8462F1A71E29ACE2007EC63A /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */; };
 		8462F1AA1E29AF81007EC63A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A91E29AF81007EC63A /* BaseViewController.swift */; };
+		846CA0B71E29BE960022A664 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CA0B61E29BE960022A664 /* ItemCell.swift */; };
 		848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9651E23E2F9003324E9 /* Address+JSON.swift */; };
 		848AC9691E23E335003324E9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9681E23E335003324E9 /* Item.swift */; };
 		848AC96E1E23E3EA003324E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC96D1E23E3EA003324E9 /* Order.swift */; };
@@ -64,6 +65,7 @@
 		8462F1A31E29A515007EC63A /* UIColor+Orderify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Orderify.swift"; path = "Extensions/UIColor+Orderify.swift"; sourceTree = "<group>"; };
 		8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderDetailsController.swift; path = "View Controllers/Order details/OrderDetailsController.swift"; sourceTree = "<group>"; };
 		8462F1A91E29AF81007EC63A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "View Controllers/Base view controller/BaseViewController.swift"; sourceTree = "<group>"; };
+		846CA0B61E29BE960022A664 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "View Controllers/Order details/View/Cells/ItemCell.swift"; sourceTree = "<group>"; };
 		848AC9651E23E2F9003324E9 /* Address+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Address+JSON.swift"; path = "Model/Address/Address+JSON.swift"; sourceTree = "<group>"; };
 		848AC9681E23E335003324E9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = Model/Item/Item.swift; sourceTree = "<group>"; };
 		848AC96D1E23E3EA003324E9 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Model/Order/Order.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		84197F2A1E24A3230073A7BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8428A12D1E2345CC003532BA /* StatisticsController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,7 +141,6 @@
 			children = (
 				84197F2B1E24A32D0073A7BE /* View */,
 				84197F2A1E24A3230073A7BE /* Controller */,
-				8428A12D1E2345CC003532BA /* StatisticsController.swift */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -258,7 +260,8 @@
 		8462F1A51E29ACB8007EC63A /* Order details */ = {
 			isa = PBXGroup;
 			children = (
-				8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */,
+				846CA0B21E29BE4A0022A664 /* View */,
+				846CA0B51E29BE600022A664 /* Controller */,
 			);
 			name = "Order details";
 			sourceTree = "<group>";
@@ -269,6 +272,30 @@
 				8462F1A91E29AF81007EC63A /* BaseViewController.swift */,
 			);
 			name = "Base view controller";
+			sourceTree = "<group>";
+		};
+		846CA0B21E29BE4A0022A664 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846CA0B41E29BE5C0022A664 /* Cells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		846CA0B41E29BE5C0022A664 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				846CA0B61E29BE960022A664 /* ItemCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		846CA0B51E29BE600022A664 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		848AC9671E23E326003324E9 /* Item */ = {
@@ -471,6 +498,7 @@
 			files = (
 				848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */,
 				848AC9731E23E458003324E9 /* Parser.swift in Sources */,
+				846CA0B71E29BE960022A664 /* ItemCell.swift in Sources */,
 				8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */,
 				84197F291E245B410073A7BE /* BorderedButton.swift in Sources */,
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,

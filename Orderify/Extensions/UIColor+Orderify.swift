@@ -17,4 +17,8 @@ extension UIColor {
     static func statisticCellNotPaidColor() -> UIColor {
         return UIColor(red:0.47, green:0.27, blue:0.16, alpha:1.00)
     }
+    
+    static func darkBlueColor() -> UIColor {
+        return UIColor(red:0.33, green:0.38, blue:0.48, alpha:1.00)
+    }
 }
