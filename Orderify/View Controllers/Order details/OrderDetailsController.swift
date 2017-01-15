@@ -9,6 +9,11 @@
 import UIKit
 import Hero
 
+
+let kCustomerDetailsSegueId = "kCustomerDetailsSegue"
+let kHeroPersonIconID       = "kHeroPersonIconID"
+
+
 class OrderDetailsController: BaseViewController,
                               UITableViewDelegate, UITableViewDataSource,
                               HeroViewControllerDelegate {
@@ -31,11 +36,12 @@ class OrderDetailsController: BaseViewController,
 
         load(order: order)
         
-        orderNameLbl.heroID     = kHeroOrderNameID
-        orderPriceLbl.heroID    = kHeroItemID
-        customerNameLbl.heroID  = kHeroCustomerNameID
-        customerEmailLbl.heroID = kHeroCustomerEmailID
-        noLabel.heroID          = kHeroNoID
+        orderNameLbl.heroID         = kHeroOrderNameID
+        orderPriceLbl.heroID        = kHeroItemID
+        customerNameLbl.heroID      = kHeroCustomerNameID
+        customerEmailLbl.heroID     = kHeroCustomerEmailID
+        noLabel.heroID              = kHeroNoID
+        personIconImageView.heroID  = kHeroPersonIconID
         
         infoBtn.heroModifiers = [.fade, .scale(0.5)]
         personIconImageView.heroModifiers = [.fade, .scale(0.5)]
@@ -60,6 +66,24 @@ class OrderDetailsController: BaseViewController,
             customerNameLbl.text    = ""
             customerEmailLbl.text   = ""
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kCustomerDetailsSegueId, let customer = sender as? Customer {
+            let customerController = segue.destination as! CustomerDetailsController
+            
+            customerController.customer = customer
+            
+            customerNameLbl.heroID      = kHeroCustomerNameID
+            customerEmailLbl.heroID     = kHeroCustomerEmailID
+        }
+    }
+    
+    
+    //MARK: - Actions
+    
+    @IBAction func customerDetailsAction(_ sender: Any) {
+        performSegue(withIdentifier: kCustomerDetailsSegueId, sender: order.customer)
     }
     
     

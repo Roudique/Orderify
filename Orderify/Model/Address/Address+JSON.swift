@@ -34,6 +34,8 @@ extension Address : JSONInitializable {
             
             self.countryCode  = countryCode
             self.provinceCode = provinceCode
+            
+            self.phoneNumber = json["phone"].string
         } else {
             return nil
         }

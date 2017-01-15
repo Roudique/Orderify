@@ -20,6 +20,7 @@ class Customer : JSONInitializable {
     var totalSpent : Double?
     
     var defaultAddress : Address?
+    var phoneNumber : String?
     
     init(id: Int, email: String, firstName: String, lastName: String) {
         self.id         = id
@@ -35,14 +36,11 @@ class Customer : JSONInitializable {
         let lastName        = json["last_name"].string
         
         if let id = id, let email = email, let firstName = firstName, let lastName = lastName {
-//            self.id             = id
-//            self.email          = email
-//            self.firstName      = firstName
-//            self.lastName       = lastName
             self.init(id: id, email: email, firstName: firstName, lastName: lastName)
             self.defaultAddress = Address.init(json: json["default_address"])
             self.totalSpent     = 0.0
             self.ordersCount    = json["orders_count"].int
+            phoneNumber = defaultAddress?.phoneNumber
         } else {
             return nil
         }

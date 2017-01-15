@@ -21,4 +21,6 @@ struct Address {
     
     var countryCode  : String
     var provinceCode : String
+    
+    var phoneNumber : String?
 }

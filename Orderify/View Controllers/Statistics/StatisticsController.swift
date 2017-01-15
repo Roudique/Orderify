@@ -84,6 +84,13 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
         if segue.identifier == kShowOrderSegueId {
             if let controller = segue.destination as? OrderDetailsController, let order = sender as? Order {
                 controller.order = order
+                
+                if let customer = order.customer {
+                    let queue = DispatchQueue.init(label: "com.roudique.parseCustomerQueue")
+                    queue.async {
+                        self.parseOrdersForCustomer(customer: customer)
+                    }
+                }
             }
         }
     }
@@ -112,6 +119,24 @@ class StatisticsController: BaseViewController, UITableViewDelegate, UITableView
     
     func prepareTotalPrice() {
         totalPriceLabel.text = "Total orders' cost: \(totalPrice) USD"
+    }
+    
+    func parseOrdersForCustomer(customer: Customer) {
+        if let orders = orders {
+            var ordersCount = 0
+            var totalSpent = 0.0
+            
+            for order in orders {
+                if order.customer?.id == customer.id {
+                    ordersCount += 1
+                    totalSpent += order.totalPriceUSD
+                }
+            }
+            
+            customer.ordersCount = ordersCount
+            customer.totalSpent = totalSpent
+        }
+        
     }
     
 

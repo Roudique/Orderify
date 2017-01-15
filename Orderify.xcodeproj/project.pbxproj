@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		478A0F80FDFB3E0F962EA586 /* Pods_Orderify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */; };
+		840BC8051E2AF76100687761 /* CustomerDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC8041E2AF76100687761 /* CustomerDetailsController.swift */; };
+		840BC8091E2AFA7100687761 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC8081E2AFA7100687761 /* AddressCell.swift */; };
 		84197F291E245B410073A7BE /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F281E245B410073A7BE /* BorderedButton.swift */; };
 		84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F2C1E24A3510073A7BE /* StatisticsView.swift */; };
 		84197F301E24A3A90073A7BE /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84197F2F1E24A3A90073A7BE /* StatisticsCell.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		5E90AD71171F0A93527C0583 /* Pods_Orderify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840BC8041E2AF76100687761 /* CustomerDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDetailsController.swift; path = "View Controllers/Customer details/Controller/CustomerDetailsController.swift"; sourceTree = "<group>"; };
+		840BC8081E2AFA7100687761 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressCell.swift; path = "View Controllers/Customer details/View/Cells/AddressCell.swift"; sourceTree = "<group>"; };
 		84197F281E245B410073A7BE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = "Custom Classes/Bordered Button/BorderedButton.swift"; sourceTree = "<group>"; };
 		84197F2C1E24A3510073A7BE /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsView.swift; path = "View Controllers/Statistics/View/StatisticsView.swift"; sourceTree = "<group>"; };
 		84197F2F1E24A3A90073A7BE /* StatisticsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsCell.swift; path = "View Controllers/Statistics/View/Cells/StatisticsCell.swift"; sourceTree = "<group>"; };
@@ -95,6 +99,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840BC8021E2AF71D00687761 /* Customer details */ = {
+			isa = PBXGroup;
+			children = (
+				840BC8061E2AFA4300687761 /* View */,
+				840BC8031E2AF72600687761 /* Controller */,
+			);
+			name = "Customer details";
+			sourceTree = "<group>";
+		};
+		840BC8031E2AF72600687761 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				840BC8041E2AF76100687761 /* CustomerDetailsController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		840BC8061E2AFA4300687761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				840BC8071E2AFA4F00687761 /* Cells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		840BC8071E2AFA4F00687761 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				840BC8081E2AFA7100687761 /* AddressCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		84197F261E245B140073A7BE /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +250,7 @@
 		843955F11E2332E900B9FF47 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				840BC8021E2AF71D00687761 /* Customer details */,
 				8462F1A51E29ACB8007EC63A /* Order details */,
 				8428A12C1E2345AD003532BA /* Statistics */,
 				843955F21E2332F000B9FF47 /* Main */,
@@ -506,12 +544,14 @@
 			files = (
 				848AC9661E23E2F9003324E9 /* Address+JSON.swift in Sources */,
 				848AC9731E23E458003324E9 /* Parser.swift in Sources */,
+				840BC8091E2AFA7100687761 /* AddressCell.swift in Sources */,
 				846CA0B71E29BE960022A664 /* ItemCell.swift in Sources */,
 				8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */,
 				84197F291E245B410073A7BE /* BorderedButton.swift in Sources */,
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,
 				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
 				84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */,
+				840BC8051E2AF76100687761 /* CustomerDetailsController.swift in Sources */,
 				8462F1AA1E29AF81007EC63A /* BaseViewController.swift in Sources */,
 				843955F41E23330D00B9FF47 /* MainController.swift in Sources */,
 				843955F91E23345100B9FF47 /* UIView+Gradient.swift in Sources */,
