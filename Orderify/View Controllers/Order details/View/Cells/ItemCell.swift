@@ -8,12 +8,15 @@
 
 import UIKit
 
+
 let kGramsInKilogram = 1_000
+
 
 class ItemCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var gramsLbl: UILabel!
+    
     
     //MARK: - Lifecycle
 
@@ -40,5 +43,4 @@ class ItemCell: UITableViewCell {
             gramsLbl.text = "📦 \(item.grams) grams"
         }
     }
-
 }
