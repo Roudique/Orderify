@@ -17,6 +17,9 @@
 		8428A12E1E2345CC003532BA /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428A12D1E2345CC003532BA /* StatisticsController.swift */; };
 		843955E61E232FE700B9FF47 /* OrderifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955E51E232FE700B9FF47 /* OrderifyTests.swift */; };
 		843955F41E23330D00B9FF47 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843955F31E23330D00B9FF47 /* MainController.swift */; };
+		845792161E2B32340058D3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E88ACE1E2B2F3D001F685C /* Main.storyboard */; };
+		845792171E2B325B0058D3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC41E2B2F22001F685C /* Assets.xcassets */; };
+		845792181E2B330E0058D3AF /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC81E2B2F32001F685C /* orders.json */; };
 		8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A31E29A515007EC63A /* UIColor+Orderify.swift */; };
 		8462F1A71E29ACE2007EC63A /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A61E29ACE2007EC63A /* OrderDetailsController.swift */; };
 		8462F1AA1E29AF81007EC63A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F1A91E29AF81007EC63A /* BaseViewController.swift */; };
@@ -28,12 +31,8 @@
 		848AC9731E23E458003324E9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9721E23E458003324E9 /* Parser.swift */; };
 		848AC9751E23E463003324E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9741E23E463003324E9 /* Address.swift */; };
 		84E88AC31E2B2EA8001F685C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC21E2B2EA8001F685C /* UIView+Gradient.swift */; };
-		84E88AC51E2B2F22001F685C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC41E2B2F22001F685C /* Assets.xcassets */; };
 		84E88AC91E2B2F32001F685C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC61E2B2F32001F685C /* AppDelegate.swift */; };
 		84E88ACB1E2B2F32001F685C /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC81E2B2F32001F685C /* orders.json */; };
-		84E88AD01E2B2F3D001F685C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E88ACC1E2B2F3D001F685C /* LaunchScreen.storyboard */; };
-		84E88AD11E2B2F3D001F685C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E88ACE1E2B2F3D001F685C /* Main.storyboard */; };
-		84E88AD31E2B2F78001F685C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AD21E2B2F78001F685C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,11 +473,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845792171E2B325B0058D3AF /* Assets.xcassets in Resources */,
+				845792161E2B32340058D3AF /* Main.storyboard in Resources */,
 				84E88ACB1E2B2F32001F685C /* orders.json in Resources */,
-				84E88AD11E2B2F3D001F685C /* Main.storyboard in Resources */,
-				84E88AD01E2B2F3D001F685C /* LaunchScreen.storyboard in Resources */,
-				84E88AD31E2B2F78001F685C /* Info.plist in Resources */,
-				84E88AC51E2B2F22001F685C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845792181E2B330E0058D3AF /* orders.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

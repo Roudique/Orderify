@@ -70,8 +70,6 @@ class Parser {
             return true
         }
         
-        print("Total price: \(totalPrice)")
-        print("Countries: \(countries)")
         totalCost = totalPrice
     }
 }
