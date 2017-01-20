@@ -31,6 +31,7 @@
 		848AC9731E23E458003324E9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9721E23E458003324E9 /* Parser.swift */; };
 		848AC9751E23E463003324E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9741E23E463003324E9 /* Address.swift */; };
 		84DE5A891E31C8E300347E3B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE5A881E31C8E300347E3B /* APIManager.swift */; };
+		84DE5A8A1E328A8E00347E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E88ACC1E2B2F3D001F685C /* LaunchScreen.storyboard */; };
 		84E88AC31E2B2EA8001F685C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC21E2B2EA8001F685C /* UIView+Gradient.swift */; };
 		84E88AC91E2B2F32001F685C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC61E2B2F32001F685C /* AppDelegate.swift */; };
 		84E88ACB1E2B2F32001F685C /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC81E2B2F32001F685C /* orders.json */; };
@@ -484,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DE5A8A1E328A8E00347E3B /* LaunchScreen.storyboard in Resources */,
 				845792171E2B325B0058D3AF /* Assets.xcassets in Resources */,
 				845792161E2B32340058D3AF /* Main.storyboard in Resources */,
 				84E88ACB1E2B2F32001F685C /* orders.json in Resources */,

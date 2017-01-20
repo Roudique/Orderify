@@ -47,15 +47,12 @@ class Parser {
                     }
                 }
             }
-            
-            
         }
         
         orders.sort { (first, second) -> Bool in
             if let id1 = Int.init(first.name.replacingOccurrences(of: "#", with: "")), let id2 = Int.init(second.name.replacingOccurrences(of: "#", with: "")) {
                 return id1 < id2
             }
-            
             return true
         }
         

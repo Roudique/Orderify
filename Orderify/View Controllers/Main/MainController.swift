@@ -15,7 +15,7 @@ let kParseSegueId = "parseSegue"
 let kAuthorLink   = "https://github.com/Roudique"
 
 
-class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFieldDelegate {
+class MainController: BaseViewController, UITextFieldDelegate {
     var fileURL : URL?
     var isLoading = false {
         didSet {
@@ -37,7 +37,7 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
     @IBOutlet weak var greetingLabel: UILabel!
     
     
-//MARK: - ViewController Lifecycle
+    //MARK: - ViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,24 +49,17 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
     }
     
     
-//MARK: - Actions
+    //MARK: - Actions
     
     @IBAction func parseDefault(_ sender: Any) {
         guard !isLoading else { return }
         
         hideKeyboard()
         
-//        if let url = URL.init(string: kBaseResourceLink + kOrdersKey + "4&" + kAccessTokenKey) {
-//            fetchJSON(url: url)
-//        }
+        isLoading = true
         let array = NSArray.init()
         APIManager.shared.fetchOrders(array) { orders in
-            DispatchQueue.main.async {
-                self.orders = orders
-                self.performSegue(withIdentifier: kParseSegueId, sender: nil)
-            }
-            
-            
+            self.goToDetails(with: orders)
         }
     }
     
@@ -77,22 +70,7 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
     }
     
     
-//MARK: - Private
-    
-    func fetchJSON(url: URL?) {
-        
-        if let url = url {
-            isLoading = true
-            let session = URLSession.init(configuration: .default,
-                                          delegate: self,
-                                          delegateQueue: nil)
-            let task = session.downloadTask(with: url)
-
-            task.resume()
-        } else {
-            showAlert(title: "Error", message: "Wrong URL 😲")
-        }
-    }
+    //MARK: - Private
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == kParseSegueId {
@@ -117,39 +95,28 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
         present(alert, animated: true, completion: nil)
     }
     
+    func goToDetails(with orders: [Order]) {
+        DispatchQueue.main.async {
+            self.orders = orders
+            self.performSegue(withIdentifier: kParseSegueId, sender: nil)
+            self.isLoading = false
+        }
+    }
+    
     
     //MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let url = URL.init(string: textField.text ?? "") {
             hideKeyboard()
-            fetchJSON(url: url)
+            
+            APIManager.shared.fetchOrders(from: url, completion: { orders in
+                self.goToDetails(with: orders)
+            })
         } else {
             showAlert(title: nil, message: "This is not URL 😑")
         }
         
         return false
-    }
-    
-    
-    //MARK: - URLSessionDownloadDelegate
-    
-    func urlSession(_ session: URLSession,
-                    downloadTask: URLSessionDownloadTask,
-                    didFinishDownloadingTo location: URL) {
-        isLoading = false
-        fileURL = location
-        
-        DispatchQueue.main.sync {
-            self.performSegue(withIdentifier: kParseSegueId, sender: nil)
-        }
-    }
-    
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        isLoading = false
-
-        if let error = error {
-            showAlert(title: "Failed to download 😲", message: "Error: \(error.localizedDescription)")
-        }
     }
 }
