@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 
 let kParseSegueId = "parseSegue"
-let kResourceLink = "https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
+
 let kAuthorLink   = "https://github.com/Roudique"
 
 
@@ -30,6 +30,7 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
             }
         }
     }
+    var orders = [Order]()
     
     @IBOutlet weak var parseJSONButton: BorderedButton!
     @IBOutlet weak var animatingView: NVActivityIndicatorView!
@@ -55,8 +56,17 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
         
         hideKeyboard()
         
-        if let url = URL.init(string: kResourceLink) {
-            fetchJSON(url: url)
+//        if let url = URL.init(string: kBaseResourceLink + kOrdersKey + "4&" + kAccessTokenKey) {
+//            fetchJSON(url: url)
+//        }
+        let array = NSArray.init()
+        APIManager.shared.fetchOrders(array) { orders in
+            DispatchQueue.main.async {
+                self.orders = orders
+                self.performSegue(withIdentifier: kParseSegueId, sender: nil)
+            }
+            
+            
         }
     }
     
@@ -86,16 +96,11 @@ class MainController: BaseViewController, URLSessionDownloadDelegate, UITextFiel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == kParseSegueId {
-            let parser = Parser.init(url: fileURL)
-            guard parser.orders.count > 0 else {
-                showAlert(title: "Error", message: "Couldn't get any useful information by given address 😵")
-                return
-            }
             
             if let statisticsController = segue.destination as? StatisticsController {
-                statisticsController.orders = parser.orders
-                statisticsController.countries = parser.countries
-                statisticsController.totalPrice = parser.totalCost
+                statisticsController.orders = self.orders
+                statisticsController.countries = Parser.getCountries(from: self.orders)
+                statisticsController.totalPrice = Parser.totalPrice(for: self.orders)
             }
         }
     }

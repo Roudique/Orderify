@@ -10,46 +10,33 @@ import Foundation
 import SwiftyJSON
 
 class Parser {
-    var orders = Array<Order>()
-    var countries = Dictionary<String, Int>()
     var totalCost = 0.0
     
     static let countryFlags        = ["US" : "🇺🇸",
                                       "CA" : "🇨🇦"]
     static let restCountriesFlag   = "🏳️"
     
-    convenience init(url: URL?) {
-        self.init()
-        
-        if let url = url {
-            parseJSON(localUrl: url)
-        } else {
-            if let path = Bundle.main.path(forResource: "orders", ofType: "json") {
-                if let localUrl = URL.init(string: path) {
-                    parseJSON(localUrl: localUrl)
+    static func getCountries(from orders: [Order]) -> Dictionary<String, Int> {
+        var countries = Dictionary<String, Int>()
+        for order in orders {
+            if let country = order.customer?.defaultAddress?.countryCode {
+                if let _ = countries[country] {
+                    countries[country]! += 1
+                } else {
+                    countries[country] = 1
                 }
             }
         }
+        return countries
     }
     
-    func parseJSON(localUrl url: URL) {
-        let data = try! Data.init(contentsOf: url)
-        let json = JSON.init(data: data)
-        var totalPrice = 0.0
+    func parse(json: JSON) -> [Order] {
+        var orders = [Order]()
         
-        if let orders = json["orders"].array {
-            for orderJSON in orders {
+        if let ordersJSON = json["orders"].array {
+            for orderJSON in ordersJSON {
                 if let order = Order.init(json: orderJSON) {
-                    self.orders.append(order)
-                    totalPrice += order.totalPriceUSD
-                    
-                    if let country = order.customer?.defaultAddress?.countryCode {
-                        if let _ = countries[country] {
-                            countries[country]! += 1
-                        } else {
-                            countries[country] = 1
-                        }
-                    }
+                    orders.append(order)
                     
                     if let items = orderJSON["line_items"].array {
                         for itemJSON in items {
@@ -60,6 +47,8 @@ class Parser {
                     }
                 }
             }
+            
+            
         }
         
         orders.sort { (first, second) -> Bool in
@@ -70,6 +59,14 @@ class Parser {
             return true
         }
         
-        totalCost = totalPrice
+        return orders
+    }
+    
+    static func totalPrice(for orders: [Order]) -> Double {
+        var totalPrice = 0.0
+        for order in orders {
+            totalPrice += order.totalPriceUSD
+        }
+        return totalPrice
     }
 }

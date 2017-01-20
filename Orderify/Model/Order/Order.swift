@@ -42,6 +42,10 @@ class Order : JSONInitializable {
             self.customer       = Customer.init(json: json["customer"])
             self.shippingAddress = Address.init(json: json["shipping_address"])
             
+            if totalPriceUSD == 0.0 {
+                print("Order \(name) has 0 price")
+            }
+            
             if let financialStatus = json["financial_status"].string {
                 self.paid = financialStatus == "paid"
             }

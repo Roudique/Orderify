@@ -30,6 +30,7 @@
 		848AC9711E23E421003324E9 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9701E23E421003324E9 /* Customer.swift */; };
 		848AC9731E23E458003324E9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9721E23E458003324E9 /* Parser.swift */; };
 		848AC9751E23E463003324E9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848AC9741E23E463003324E9 /* Address.swift */; };
+		84DE5A891E31C8E300347E3B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE5A881E31C8E300347E3B /* APIManager.swift */; };
 		84E88AC31E2B2EA8001F685C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC21E2B2EA8001F685C /* UIView+Gradient.swift */; };
 		84E88AC91E2B2F32001F685C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E88AC61E2B2F32001F685C /* AppDelegate.swift */; };
 		84E88ACB1E2B2F32001F685C /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E88AC81E2B2F32001F685C /* orders.json */; };
@@ -69,6 +70,7 @@
 		848AC9701E23E421003324E9 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Customer.swift; path = Model/Customer/Customer.swift; sourceTree = "<group>"; };
 		848AC9721E23E458003324E9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Model/Parser/Parser.swift; sourceTree = "<group>"; };
 		848AC9741E23E463003324E9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Model/Address/Address.swift; sourceTree = "<group>"; };
+		84DE5A881E31C8E300347E3B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = Model/APIManager/APIManager.swift; sourceTree = "<group>"; };
 		84E88AC21E2B2EA8001F685C /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Gradient.swift"; path = "Extensions/UIView+Gradient.swift"; sourceTree = "<group>"; };
 		84E88AC41E2B2F22001F685C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		84E88AC61E2B2F32001F685C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		843955F01E23304300B9FF47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84DE5A871E31C8D100347E3B /* APIManager */,
 				848AC96F1E23E40D003324E9 /* Customer */,
 				848AC96C1E23E3DA003324E9 /* Order */,
 				848AC9671E23E326003324E9 /* Item */,
@@ -366,6 +369,14 @@
 			children = (
 			);
 			name = LoadingAnimationView;
+			sourceTree = "<group>";
+		};
+		84DE5A871E31C8D100347E3B /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				84DE5A881E31C8E300347E3B /* APIManager.swift */,
+			);
+			name = APIManager;
 			sourceTree = "<group>";
 		};
 		A0881F7D2A3B26A620175255 /* Frameworks */ = {
@@ -548,6 +559,7 @@
 				846CA0B71E29BE960022A664 /* ItemCell.swift in Sources */,
 				8462F1A41E29A516007EC63A /* UIColor+Orderify.swift in Sources */,
 				84197F291E245B410073A7BE /* BorderedButton.swift in Sources */,
+				84DE5A891E31C8E300347E3B /* APIManager.swift in Sources */,
 				848AC9691E23E335003324E9 /* Item.swift in Sources */,
 				848AC96E1E23E3EA003324E9 /* Order.swift in Sources */,
 				84197F2D1E24A3510073A7BE /* StatisticsView.swift in Sources */,
